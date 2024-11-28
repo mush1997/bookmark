@@ -1,0 +1,932 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Rubik;
+  font-size: 18px;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  color: hsl(229, 31%, 21%);
+}
+
+@keyframes showing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body header {
+  margin-bottom: 60px;
+  padding: 30px 70px;
+}
+body header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body header nav .logo {
+  margin-right: 16px;
+  width: 15%;
+  max-width: 180px;
+  min-width: 150px;
+}
+body header nav #hamburgerIcon,
+body header nav #closeIcon,
+body header nav .sns {
+  display: none;
+}
+body header nav #hamburgerIcon:hover,
+body header nav #closeIcon:hover,
+body header nav .sns:hover {
+  cursor: pointer;
+}
+body header nav .block ul li a,
+body header nav .block ul button {
+  margin: 0 16px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+body header nav .block ul li {
+  display: inline-block;
+}
+body header nav .block ul li a {
+  color: hsl(229, 31%, 21%);
+  text-decoration: none;
+}
+body header nav .block ul li a:hover {
+  cursor: pointer;
+  color: hsl(0, 94%, 66%);
+}
+body header nav .block ul button {
+  margin-right: 0;
+  padding: 8px 24px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-color: hsl(0, 94%, 66%);
+  color: white;
+  box-shadow: 0 2px 4px 0px #ccc;
+}
+body header nav .block ul button:hover {
+  cursor: pointer;
+  border-color: hsl(0, 94%, 66%);
+  background-color: transparent;
+  color: hsl(0, 94%, 66%);
+  box-shadow: none;
+}
+body main section {
+  margin-bottom: 60px;
+  padding: 30px;
+}
+body main section hgroup {
+  margin-bottom: 30px;
+  width: 50%;
+  text-align: center;
+}
+body main section hgroup h2 {
+  font-size: 1.5rem;
+}
+body main section p {
+  margin: 20px 0;
+  color: hsl(229, 8%, 60%);
+  line-height: 1.4;
+}
+body main section button {
+  margin-top: 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+body main section button:hover {
+  cursor: pointer;
+}
+body main section .moreInfo {
+  padding: 12px 20px;
+  border: none;
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+  box-shadow: 0 2px 4px 0px #ccc;
+}
+body main section .moreInfo:hover {
+  box-shadow: none;
+  transform: scale(1.05);
+}
+body main section .downloadBtn {
+  padding: 12px 20px;
+  border: 2px solid transparent;
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+}
+body main section .downloadBtn:hover {
+  border-color: hsl(231, 69%, 60%);
+  background-color: transparent;
+  color: hsl(231, 69%, 60%);
+}
+body main #hero {
+  padding-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main #hero .heroPic {
+  flex-basis: 50%;
+  order: 1;
+  min-width: 380px;
+  position: relative;
+}
+body main #hero .heroPic img {
+  padding-right: 30px;
+  width: 100%;
+}
+body main #hero .heroPic div {
+  width: 72%;
+  aspect-ratio: 7/5;
+  border-radius: 130px 0 0 130px;
+  background-color: hsl(231, 69%, 60%);
+  position: absolute;
+  bottom: -1%;
+  right: 0;
+  z-index: -1;
+}
+body main #hero .text {
+  flex-basis: 50%;
+  padding: 40px;
+}
+body main #hero .text h1 {
+  font-size: 2rem;
+}
+body main #hero .text .chrome {
+  margin-right: 10px;
+}
+body main #hero .text .firefox {
+  background-color: #eee;
+  color: hsl(229, 31%, 21%);
+  box-shadow: 0 2px 2px 0px #ddd;
+}
+body main #hero .text .firefox:hover {
+  border-color: hsl(229, 31%, 21%);
+  background-color: transparent;
+  box-shadow: none;
+}
+body main #feature {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 0;
+}
+body main #feature .panel {
+  margin-bottom: 40px;
+  width: 65%;
+  text-align: center;
+}
+body main #feature .panel ul {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #ddd;
+}
+body main #feature .panel ul li {
+  flex-basis: 30%;
+  list-style: none;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+body main #feature .panel ul li:hover {
+  cursor: pointer;
+  color: hsl(0, 94%, 66%);
+}
+body main #feature .panel ul li.current {
+  border-bottom: 4px solid hsl(0, 94%, 66%);
+  color: black;
+}
+body main #feature article {
+  padding: 30px 0;
+  width: 100%;
+  display: none;
+}
+body main #feature article .pic {
+  width: 48%;
+  display: inline-block;
+  text-align: right;
+  vertical-align: middle;
+  position: relative;
+}
+body main #feature article .pic img {
+  width: 75%;
+  min-width: 300px;
+}
+body main #feature article .pic div {
+  width: 80%;
+  aspect-ratio: 3/2;
+  border-radius: 0 130px 130px 0;
+  background-color: hsl(231, 69%, 60%);
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  z-index: -1;
+}
+body main #feature article .content {
+  padding: 30px 70px;
+  width: 48%;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+body main #feature article .content h3 {
+  font-size: 1.5rem;
+}
+body main #feature article.visible {
+  display: block;
+  animation: showing 1.2s forwards;
+}
+body main #feature article:first-of-type .pic div {
+  width: 95%;
+  aspect-ratio: 5/2;
+  bottom: -10%;
+}
+body main #pricing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body main #pricing .container {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+body main #pricing .container .option {
+  flex: 1 0 240px;
+  min-height: 480px;
+  padding: 20px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  position: relative;
+}
+body main #pricing .container .option hgroup {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+body main #pricing .container .option hgroup h3 {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+body main #pricing .container .option hgroup p {
+  margin: 20px auto;
+  padding: 6px 0;
+  width: 65%;
+  min-width: 200px;
+  border-radius: 10px;
+  background-color: ghostwhite;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: hsl(0, 94%, 66%);
+  letter-spacing: 1px;
+}
+body main #pricing .container .option hgroup p span {
+  font-size: 0.7rem;
+}
+body main #pricing .container .option ul {
+  padding: 10px 20px;
+}
+body main #pricing .container .option ul li {
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid gainsboro;
+  font-size: 0.85rem;
+  color: hsl(229, 31%, 21%);
+  text-align: left;
+}
+body main #pricing .container .option ul li:last-child {
+  border-bottom: none;
+}
+body main #pricing .container .option .learnMore {
+  padding: 10px 16px;
+  border: none;
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+  letter-spacing: 1px;
+  box-shadow: 0 1px 4px 0 grey;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+body main #pricing .container .option .learnMore:hover {
+  background-color: hsl(229, 31%, 21%);
+}
+body main #pricing .container .free {
+  border-radius: 10px 0 0 10px;
+  background-color: hsla(231, 69%, 60%, 0.1);
+}
+body main #pricing .container .standard {
+  background-color: hsla(231, 69%, 60%, 0.4);
+}
+body main #pricing .container .premium {
+  border-radius: 0 10px 10px 0;
+  background-color: hsla(231, 69%, 60%, 0.7);
+}
+body main #download {
+  margin-bottom: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body main #download .extensions {
+  display: flex;
+  justify-content: center;
+}
+body main #download .extensions .card {
+  flex-basis: 20%;
+  min-width: 200px;
+  margin: 0 16px;
+  padding: 16px 0;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 16px 2px #ccc;
+  text-align: center;
+}
+body main #download .extensions .card .icon {
+  margin-bottom: 20px;
+  width: 36%;
+}
+body main #download .extensions .card .opera {
+  width: 33%;
+}
+body main #download .extensions .card .dots {
+  width: 100%;
+}
+body main #download .extensions .card h3 {
+  margin: 0 16px;
+  font-size: 1.25rem;
+}
+body main #download .extensions .card p {
+  margin: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+body main #download .extensions .card button {
+  margin: 20px 16px 0 16px;
+}
+body main #download .extensions .card:nth-of-type(2) {
+  position: relative;
+  top: 30px;
+}
+body main #download .extensions .card:nth-of-type(3) {
+  position: relative;
+  top: 60px;
+}
+body main #FAQs {
+  margin-bottom: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body main #FAQs .questions {
+  width: 55%;
+}
+body main #FAQs .questions article .first {
+  border-top: 2px solid #ddd;
+}
+body main #FAQs .questions article .title {
+  border-bottom: 2px solid #ddd;
+  padding-right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main #FAQs .questions article .title p {
+  margin-right: 16px;
+  color: hsl(229, 31%, 21%);
+}
+body main #FAQs .questions article .title p:hover {
+  cursor: pointer;
+  color: hsl(0, 94%, 66%);
+}
+body main #FAQs .questions article .title .arrow {
+  content: url("images/icon-arrow.svg");
+  width: 18px;
+}
+body main #FAQs .questions article .title .arrow:hover {
+  cursor: pointer;
+}
+body main #FAQs .questions article .answer {
+  display: none;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: gray;
+  line-height: 1.6;
+}
+body main #FAQs .questions article.unfolded .title {
+  border-bottom: none;
+}
+body main #FAQs .questions article.unfolded .title .arrow {
+  transform: rotate(180deg);
+  filter: invert(51%) sepia(31%) saturate(6029%) hue-rotate(328deg) brightness(102%) contrast(97%);
+}
+body main #FAQs .questions article.unfolded .answer {
+  display: block;
+  animation: showing 1.5s forwards;
+}
+body main #FAQs div:last-child {
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
+body main #FAQs div:last-child button {
+  margin-top: 0;
+}
+body main #contact {
+  margin-bottom: 0;
+  padding: 40px 30px;
+  background-color: hsl(231, 69%, 60%);
+  text-align: center;
+}
+body main #contact span {
+  font-size: 0.7rem;
+  color: white;
+  letter-spacing: 3px;
+  word-spacing: 4px;
+  text-transform: uppercase;
+}
+body main #contact p {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+}
+body main #contact form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+body main #contact form div {
+  margin-right: 16px;
+  text-align: left;
+  position: relative;
+}
+body main #contact form div img {
+  visibility: hidden;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 16px;
+  top: 14px;
+}
+body main #contact form div input {
+  padding: 10px 12px;
+  width: 340px;
+  height: 48px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 0.8rem;
+}
+body main #contact form div p {
+  display: none;
+  margin: 0;
+  padding: 6px 10px;
+  border-radius: 0 0 6px 6px;
+  border: none;
+  background-color: hsl(0, 94%, 66%);
+  font-size: 0.7rem;
+  font-weight: 100;
+  color: white;
+  font-style: italic;
+}
+body main #contact form div.warning img {
+  visibility: visible;
+}
+body main #contact form div.warning input {
+  border-radius: 6px 6px 0 0;
+  border: 2px solid hsl(0, 94%, 66%);
+}
+body main #contact form div.warning p {
+  display: block;
+}
+body main #contact form button {
+  margin-top: 0;
+  padding: 0 18px;
+  height: 48px;
+  border: 2px solid transparent;
+  background-color: hsl(0, 94%, 66%);
+  color: white;
+}
+body main #contact form button:hover {
+  border-color: hsl(0, 94%, 66%);
+  background-color: white;
+  color: hsl(0, 94%, 66%);
+}
+body footer {
+  padding: 30px 60px 16px 60px;
+  background-color: hsl(229, 31%, 21%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+body footer .menu img {
+  margin-right: 16px;
+  filter: brightness(200%);
+  vertical-align: middle;
+}
+body footer .menu ul {
+  display: inline-block;
+}
+body footer .menu ul li {
+  display: inline-block;
+}
+body footer .menu ul li a {
+  margin: 0 16px;
+  font-size: 0.7rem;
+  font-weight: 100;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+body footer .menu ul li a:hover {
+  cursor: pointer;
+  color: hsl(0, 94%, 66%);
+}
+body footer .sns img {
+  margin: 0 10px;
+  width: 20px;
+}
+body footer .sns img:hover {
+  cursor: pointer;
+  filter: invert(51%) sepia(31%) saturate(6029%) hue-rotate(328deg) brightness(102%) contrast(97%);
+}
+body footer .attribution {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 10px;
+  color: hsl(229, 8%, 60%);
+  text-align: center;
+}
+body footer .attribution a {
+  font-size: 10px;
+  color: hsl(229, 8%, 60%);
+}
+
+@media screen and (max-width: 860px) {
+  body header {
+    margin-bottom: 40px;
+    padding: 30px 50px;
+  }
+  body main section {
+    padding: 20px 30px;
+  }
+  body main section hgroup {
+    width: 65%;
+  }
+  body main #hero .text {
+    padding: 30px 20px;
+  }
+  body main #feature {
+    padding: 20px 0;
+  }
+  body main #feature .panel {
+    width: 70%;
+  }
+  body main #feature article {
+    padding: 10px 0;
+  }
+  body main #feature article .content {
+    padding: 30px 50px;
+  }
+  body main #pricing .container {
+    width: 90%;
+  }
+  body main #pricing .container .option {
+    flex: 1 0 200px;
+  }
+  body main #pricing .container .option hgroup p {
+    width: 100%;
+    min-width: auto;
+  }
+  body main #pricing .container .option ul {
+    padding: 10px 0;
+  }
+  body main #pricing .container .option .learnMore {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 760px) {
+  body header nav #hamburgerIcon {
+    display: block;
+  }
+  body header nav .block {
+    display: none;
+  }
+  body header nav.mobile .logo {
+    z-index: 15;
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(332deg) brightness(105%) contrast(102%);
+  }
+  body header nav.mobile #hamburgerIcon {
+    display: none;
+  }
+  body header nav.mobile #closeIcon {
+    display: block;
+    z-index: 15;
+  }
+  body header nav.mobile .block {
+    padding: 40px 40px 20px 40px;
+    background-color: hsl(229, 31%, 21%);
+    opacity: 0.9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    overflow: auto;
+  }
+  body header nav.mobile .block ul {
+    margin: 60px 0 30px 0;
+    width: 100%;
+  }
+  body header nav.mobile .block ul li {
+    padding: 20px 0;
+    border-bottom: 1px solid #777;
+    text-align: center;
+    display: block;
+  }
+  body header nav.mobile .block ul li a {
+    font-weight: 100;
+    color: white;
+    letter-spacing: 3px;
+  }
+  body header nav.mobile .block ul li a:hover {
+    color: white;
+  }
+  body header nav.mobile .block ul li:first-child {
+    border-top: 1px solid #777;
+  }
+  body header nav.mobile .block ul button {
+    margin: 20px 0 0 0;
+    padding: 12px 0;
+    width: 100%;
+    border-color: white;
+    background-color: transparent;
+    letter-spacing: 4px;
+    box-shadow: none;
+  }
+  body header nav.mobile .block ul button:hover {
+    border-color: white;
+    color: white;
+  }
+  body header nav.mobile .sns {
+    align-self: flex-end;
+    display: block;
+  }
+  body header nav.mobile .sns img {
+    margin: 0 12px;
+    width: 20px;
+  }
+  body header nav.mobile .sns img:hover {
+    cursor: pointer;
+  }
+  body main section hgroup {
+    padding: 0 40px;
+    width: 100%;
+  }
+  body main #hero {
+    display: block;
+  }
+  body main #hero .heroPic {
+    min-width: auto;
+    text-align: center;
+  }
+  body main #hero .heroPic img {
+    padding-right: 0;
+    width: 90%;
+  }
+  body main #hero .text {
+    margin: 40px 30px 0 0;
+    padding: 30px;
+    text-align: center;
+  }
+  body main #hero .text button {
+    width: 48%;
+  }
+  body main #feature {
+    display: block;
+  }
+  body main #feature .panel {
+    margin: -30px auto 0 auto;
+    padding: 40px;
+    width: 95%;
+  }
+  body main #feature .panel ul {
+    display: block;
+  }
+  body main #feature .panel ul li {
+    border-top: 2px solid #ddd;
+    text-align: center;
+  }
+  body main #feature article .pic {
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+  }
+  body main #feature article .pic img {
+    width: 65%;
+    min-width: auto;
+  }
+  body main #feature article .pic div {
+    width: 60%;
+    border-radius: 0 100px 100px 0;
+    bottom: -2%;
+  }
+  body main #feature article .content {
+    padding: 40px;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  body main #feature article:first-of-type .pic div {
+    width: 75%;
+    aspect-ratio: 2/1;
+  }
+  body main #pricing {
+    display: block;
+  }
+  body main #pricing .container {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+  }
+  body main #pricing .container .option {
+    width: 100%;
+    min-height: auto;
+    display: block;
+    text-align: center;
+  }
+  body main #pricing .container .option hgroup p {
+    width: 100%;
+    max-width: 300px;
+  }
+  body main #pricing .container .option ul {
+    margin: 0 auto;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 330px;
+  }
+  body main #pricing .container .option ul li {
+    text-align: center;
+  }
+  body main #pricing .container .option .learnMore {
+    width: auto;
+    position: static;
+    transform: none;
+  }
+  body main #pricing .container .free {
+    border-radius: 10px 10px 0 0;
+  }
+  body main #pricing .container .premium {
+    border-radius: 0 0 10px 10px;
+  }
+  body main #download {
+    margin-bottom: 90px;
+    display: block;
+  }
+  body main #download .extensions {
+    margin: 40px auto 0 auto;
+    padding: 0 40px;
+    width: 85%;
+    display: block;
+  }
+  body main #download .extensions .card {
+    min-width: auto;
+    margin: 24px 0;
+    padding: 30px 0;
+  }
+  body main #download .extensions .card .icon {
+    margin-bottom: 20px;
+    width: 20%;
+  }
+  body main #download .extensions .card .opera {
+    width: 20%;
+  }
+  body main #download .extensions .card button {
+    margin: 20px 0 0 0;
+    width: 80%;
+  }
+  body main #download .extensions .card:nth-of-type(2),
+  body main #download .extensions .card:nth-of-type(3) {
+    position: static;
+  }
+  body main #FAQs {
+    display: block;
+  }
+  body main #FAQs .questions {
+    padding: 40px;
+    width: 100%;
+  }
+  body main #FAQs div:last-child {
+    margin-top: 10px;
+  }
+  body main #contact form {
+    padding: 0 40px;
+    display: block;
+  }
+  body main #contact form div {
+    margin: 0 0 20px 0;
+  }
+  body main #contact form div input {
+    width: 100%;
+  }
+  body main #contact form button {
+    width: 100%;
+  }
+  body footer {
+    display: block;
+  }
+  body footer .menu {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  body footer .menu img {
+    margin-right: 0;
+  }
+  body footer .menu ul {
+    display: block;
+  }
+  body footer .menu ul li {
+    margin: 16px 0;
+    display: block;
+  }
+  body footer .menu ul li a {
+    margin: 0;
+    letter-spacing: 2px;
+  }
+  body footer .sns {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  body header {
+    padding: 30px;
+  }
+  body main section {
+    padding: 30px;
+  }
+  body main section hgroup {
+    padding: 0 30px;
+  }
+  body main #hero .text {
+    padding: 0px;
+  }
+  body main #hero .text button {
+    width: 100%;
+  }
+  body main #hero .text .chrome {
+    margin-right: 0;
+  }
+  body main #feature article {
+    padding-bottom: 0;
+  }
+  body main #feature article .content {
+    padding: 30px 30px 10px 30px;
+  }
+  body main #pricing .container {
+    width: 90%;
+  }
+  body main #download {
+    margin-bottom: 60px;
+  }
+  body main #download hgroup {
+    padding: 0;
+  }
+  body main #download .extensions {
+    padding: 0 10px;
+    width: 100%;
+    max-width: 320px;
+  }
+  body main #FAQs hgroup {
+    padding: 0;
+  }
+  body main #FAQs .questions {
+    padding: 10px;
+  }
+  body main #contact form {
+    padding: 0;
+  }
+  body footer {
+    padding: 30px 30px 20px 30px;
+  }
+}/*# sourceMappingURL=style.css.map */
