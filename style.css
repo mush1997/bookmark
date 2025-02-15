@@ -121,6 +121,7 @@ body main section .moreInfo:hover {
 }
 body main section .downloadBtn {
   padding: 12px 20px;
+  width: 160px;
   border: 2px solid transparent;
   background-color: hsl(231, 69%, 60%);
   color: white;
@@ -331,6 +332,14 @@ body main #pricing .container .free {
 }
 body main #pricing .container .standard {
   background-color: hsla(231, 69%, 60%, 0.4);
+  box-shadow: 0px 1px 8px 2px hsl(229, 47%, 49%);
+}
+body main #pricing .container .standard hgroup h3 {
+  font-size: 1.6rem;
+}
+body main #pricing .container .standard hgroup p,
+body main #pricing .container .standard hgroup p span {
+  color: red;
 }
 body main #pricing .container .premium {
   border-radius: 0 10px 10px 0;
@@ -721,7 +730,10 @@ body footer .attribution a {
     text-align: center;
   }
   body main #hero .text button {
-    width: 48%;
+    width: 51%;
+  }
+  body main #hero .text .chrome {
+    margin-right: 0;
   }
   body main #feature {
     display: block;
@@ -893,9 +905,6 @@ body footer .attribution a {
   }
   body main #hero .text button {
     width: 100%;
-  }
-  body main #hero .text .chrome {
-    margin-right: 0;
   }
   body main #feature article {
     padding-bottom: 0;
