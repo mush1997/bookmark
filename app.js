@@ -68,7 +68,10 @@ let validation;
 function checkEmailAddr(event) {
     event.preventDefault();
     checkInputValue();
-    if (validation) { form.reset(); }
+    if (validation) {
+        form.reset();
+        alert("Thank you! We will contact you soon!");
+    }
 }
 
 function checkInputValue() {
