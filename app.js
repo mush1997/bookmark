@@ -62,7 +62,7 @@ arrows.forEach((arrow) => arrow.addEventListener("click", toggleAnswer));
 const form = document.querySelector("form");
 const inputBox = form.querySelector("div");
 const input = form.querySelector("input");
-const regex = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
+const regex = /^([a-zA-Z0-9]{1,})+[a-zA-Z0-9._-]+@([a-zA-Z0-9]{1,})+([a-zA-Z0-9.-]{0,})+(\.[a-zA-Z]{2,})$/;
 let validation;
 
 function checkEmailAddr(event) {
