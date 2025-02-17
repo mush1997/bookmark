@@ -120,8 +120,8 @@ body main section .moreInfo:hover {
   transform: scale(1.05);
 }
 body main section .downloadBtn {
-  padding: 12px 20px;
   width: 160px;
+  height: 44px;
   border: 2px solid transparent;
   background-color: hsl(231, 69%, 60%);
   color: white;
@@ -729,12 +729,6 @@ body footer .attribution a {
     padding: 30px;
     text-align: center;
   }
-  body main #hero .text button {
-    width: 51%;
-  }
-  body main #hero .text .chrome {
-    margin-right: 0;
-  }
   body main #feature {
     display: block;
   }
@@ -905,6 +899,9 @@ body footer .attribution a {
   }
   body main #hero .text button {
     width: 100%;
+  }
+  body main #hero .text .chrome {
+    margin-right: 0;
   }
   body main #feature article {
     padding-bottom: 0;
