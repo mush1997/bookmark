@@ -32,6 +32,7 @@ h3 {
 
 body {
     header {
+        border: 1px solid red;
         margin-bottom: 60px;
         padding: 30px 70px;
 
@@ -52,9 +53,9 @@ body {
             .sns {
                 display: none;
 
-                &:hover {
-                    cursor: pointer;
-                }
+                // &:hover {
+                //     cursor: pointer;
+                // }
             }
 
             .block {
@@ -75,10 +76,10 @@ body {
                             color: $very_dark_blue;
                             text-decoration: none;
 
-                            &:hover {
-                                cursor: pointer;
-                                color: $soft_red;
-                            }
+                            // &:hover {
+                            //     cursor: pointer;
+                            //     color: $soft_red;
+                            // }
                         }
                     }
 
@@ -91,13 +92,13 @@ body {
                         color: white;
                         box-shadow: 0 2px 4px 0px #ccc;
 
-                        &:hover {
-                            cursor: pointer;
-                            border-color: $soft_red;
-                            background-color: transparent;
-                            color: $soft_red;
-                            box-shadow: none;
-                        }
+                        // &:hover {
+                        //     cursor: pointer;
+                        //     border-color: $soft_red;
+                        //     background-color: transparent;
+                        //     color: $soft_red;
+                        //     box-shadow: none;
+                        // }
                     }
                 }
             }
@@ -131,9 +132,9 @@ body {
                 font-size: 0.85rem;
                 font-weight: 300;
 
-                &:hover {
-                    cursor: pointer;
-                }
+                // &:hover {
+                //     cursor: pointer;
+                // }
             }
 
             .moreInfo {
@@ -143,10 +144,10 @@ body {
                 color: white;
                 box-shadow: 0 2px 4px 0px #ccc;
 
-                &:hover {
-                    box-shadow: none;
-                    transform: scale(1.05);
-                }
+                // &:hover {
+                //     box-shadow: none;
+                //     transform: scale(1.05);
+                // }
             }
 
             .downloadBtn {
@@ -156,11 +157,11 @@ body {
                 background-color: $soft_blue;
                 color: white;
 
-                &:hover {
-                    border-color: $soft_blue;
-                    background-color: transparent;
-                    color: $soft_blue;
-                }
+                // &:hover {
+                //     border-color: $soft_blue;
+                //     background-color: transparent;
+                //     color: $soft_blue;
+                // }
             }
         }
 
@@ -210,11 +211,11 @@ body {
                     color: $very_dark_blue;
                     box-shadow: 0 2px 2px 0px #ddd;
 
-                    &:hover {
-                        border-color: $very_dark_blue;
-                        background-color: transparent;
-                        box-shadow: none;
-                    }
+                    // &:hover {
+                    //     border-color: $very_dark_blue;
+                    //     background-color: transparent;
+                    //     box-shadow: none;
+                    // }
                 }
             }
         }
@@ -242,10 +243,10 @@ body {
                         font-size: 0.9rem;
                         color: #555;
 
-                        &:hover {
-                            cursor: pointer;
-                            color: $soft_red;
-                        }
+                        // &:hover {
+                        //     cursor: pointer;
+                        //     color: $soft_red;
+                        // }
                     }
 
                     li.current {
@@ -392,9 +393,9 @@ body {
                         bottom: 20px;
                         transform: translateX(-50%);
 
-                        &:hover {
-                            background-color: $very_dark_blue;
-                        }
+                        // &:hover {
+                        //     background-color: $very_dark_blue;
+                        // }
                     }
                 }
 
@@ -513,19 +514,19 @@ body {
                             margin-right: 16px;
                             color: $very_dark_blue;
 
-                            &:hover {
-                                cursor: pointer;
-                                color: $soft_red;
-                            }
+                            // &:hover {
+                            //     cursor: pointer;
+                            //     color: $soft_red;
+                            // }
                         }
 
                         .arrow {
                             content: url("images/icon-arrow.svg");
                             width: 18px;
 
-                            &:hover {
-                                cursor: pointer;
-                            }
+                            // &:hover {
+                            //     cursor: pointer;
+                            // }
                         }
                     }
 
@@ -654,11 +655,11 @@ body {
                     background-color: $soft_red;
                     color: white;
 
-                    &:hover {
-                        border-color: $soft_red;
-                        background-color: white;
-                        color: $soft_red;
-                    }
+                    // &:hover {
+                    //     border-color: $soft_red;
+                    //     background-color: white;
+                    //     color: $soft_red;
+                    // }
                 }
             }
         }
@@ -678,9 +679,9 @@ body {
                 filter: brightness(200%);
                 vertical-align: middle;
 
-                &:hover{
-                    cursor: pointer;
-                }
+                // &:hover {
+                //     cursor: pointer;
+                // }
             }
 
             ul {
@@ -698,10 +699,10 @@ body {
                         text-transform: uppercase;
                         text-decoration: none;
 
-                        &:hover {
-                            cursor: pointer;
-                            color: $soft_red;
-                        }
+                        // &:hover {
+                        //     cursor: pointer;
+                        //     color: $soft_red;
+                        // }
                     }
                 }
             }
@@ -712,10 +713,10 @@ body {
                 margin: 0 10px;
                 width: 20px;
 
-                &:hover {
-                    cursor: pointer;
-                    filter: invert(51%) sepia(31%) saturate(6029%) hue-rotate(328deg) brightness(102%) contrast(97%);
-                }
+                // &:hover {
+                //     cursor: pointer;
+                //     filter: invert(51%) sepia(31%) saturate(6029%) hue-rotate(328deg) brightness(102%) contrast(97%);
+                // }
             }
         }
 
@@ -729,6 +730,103 @@ body {
             a {
                 font-size: 10px;
                 color: $grayish_blue;
+            }
+        }
+    }
+}
+
+@media screen and (hover:hover) {
+    body {
+        header nav {
+
+            #hamburgerIcon:hover,
+            #closeIcon:hover,
+            .sns:hover {
+                cursor: pointer;
+            }
+
+            .block ul {
+                li a:hover {
+                    cursor: pointer;
+                    color: $soft_red;
+                }
+
+                button:hover {
+                    cursor: pointer;
+                    border-color: $soft_red;
+                    background-color: transparent;
+                    color: $soft_red;
+                    box-shadow: none;
+                }
+            }
+        }
+
+        main {
+            section {
+                button:hover {
+                    cursor: pointer;
+                }
+
+                .moreInfo:hover {
+                    box-shadow: none;
+                    transform: scale(1.05);
+                }
+
+                .downloadBtn:hover {
+                    border-color: $soft_blue;
+                    background-color: transparent;
+                    color: $soft_blue;
+                }
+            }
+
+            #hero .text .firefox:hover {
+                border-color: $very_dark_blue;
+                background-color: transparent;
+                box-shadow: none;
+            }
+
+            #feature .panel ul li:hover {
+                cursor: pointer;
+                color: $soft_red;
+            }
+
+            #pricing .container .option .learnMore:hover {
+                background-color: $very_dark_blue;
+            }
+
+            #FAQs .questions article .title {
+                p:hover {
+                    cursor: pointer;
+                    color: $soft_red;
+                }
+
+                .arrow:hover {
+                    cursor: pointer;
+                }
+            }
+
+            #contact form button:hover {
+                border-color: $soft_red;
+                background-color: white;
+                color: $soft_red;
+            }
+        }
+
+        footer {
+            .menu {
+                img:hover {
+                    cursor: pointer;
+                }
+
+                ul li a:hover {
+                    cursor: pointer;
+                    color: $soft_red;
+                }
+            }
+
+            .sns img:hover {
+                cursor: pointer;
+                filter: invert(51%) sepia(31%) saturate(6029%) hue-rotate(328deg) brightness(102%) contrast(97%);
             }
         }
     }
@@ -859,9 +957,9 @@ body {
                                 color: white;
                                 letter-spacing: 3px;
 
-                                &:hover {
-                                    color: white;
-                                }
+                                // &:hover {
+                                //     color: white;
+                                // }
                             }
                         }
 
@@ -878,10 +976,10 @@ body {
                             letter-spacing: 4px;
                             box-shadow: none;
 
-                            &:hover {
-                                border-color: white;
-                                color: white;
-                            }
+                            // &:hover {
+                            //     border-color: white;
+                            //     color: white;
+                            // }
                         }
                     }
                 }
@@ -894,9 +992,9 @@ body {
                         margin: 0 12px;
                         width: 20px;
 
-                        &:hover {
-                            cursor: pointer;
-                        }
+                        // &:hover {
+                        //     cursor: pointer;
+                        // }
                     }
                 }
             }
@@ -1132,6 +1230,25 @@ body {
             .sns {
                 text-align: center;
             }
+        }
+    }
+}
+
+@media screen and (max-width:760px) and (hover:hover) {
+    body header nav.mobile {
+        .block ul {
+            li a:hover {
+                color: white;
+            }
+
+            button:hover {
+                border-color: white;
+                color: white;
+            }
+        }
+
+        .sns img:hover {
+            cursor: pointer;
         }
     }
 }

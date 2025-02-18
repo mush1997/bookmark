@@ -24,6 +24,7 @@ h3 {
   }
 }
 body header {
+  border: 1px solid red;
   margin-bottom: 60px;
   padding: 30px 70px;
 }
@@ -43,11 +44,6 @@ body header nav #closeIcon,
 body header nav .sns {
   display: none;
 }
-body header nav #hamburgerIcon:hover,
-body header nav #closeIcon:hover,
-body header nav .sns:hover {
-  cursor: pointer;
-}
 body header nav .block ul li a,
 body header nav .block ul button {
   margin: 0 16px;
@@ -62,10 +58,6 @@ body header nav .block ul li a {
   color: hsl(229, 31%, 21%);
   text-decoration: none;
 }
-body header nav .block ul li a:hover {
-  cursor: pointer;
-  color: hsl(0, 94%, 66%);
-}
 body header nav .block ul button {
   margin-right: 0;
   padding: 8px 24px;
@@ -74,13 +66,6 @@ body header nav .block ul button {
   background-color: hsl(0, 94%, 66%);
   color: white;
   box-shadow: 0 2px 4px 0px #ccc;
-}
-body header nav .block ul button:hover {
-  cursor: pointer;
-  border-color: hsl(0, 94%, 66%);
-  background-color: transparent;
-  color: hsl(0, 94%, 66%);
-  box-shadow: none;
 }
 body main section {
   margin-bottom: 60px;
@@ -105,9 +90,6 @@ body main section button {
   font-size: 0.85rem;
   font-weight: 300;
 }
-body main section button:hover {
-  cursor: pointer;
-}
 body main section .moreInfo {
   padding: 12px 20px;
   border: none;
@@ -115,21 +97,12 @@ body main section .moreInfo {
   color: white;
   box-shadow: 0 2px 4px 0px #ccc;
 }
-body main section .moreInfo:hover {
-  box-shadow: none;
-  transform: scale(1.05);
-}
 body main section .downloadBtn {
   width: 160px;
   height: 44px;
   border: 2px solid transparent;
   background-color: hsl(231, 69%, 60%);
   color: white;
-}
-body main section .downloadBtn:hover {
-  border-color: hsl(231, 69%, 60%);
-  background-color: transparent;
-  color: hsl(231, 69%, 60%);
 }
 body main #hero {
   padding-right: 0;
@@ -172,11 +145,6 @@ body main #hero .text .firefox {
   color: hsl(229, 31%, 21%);
   box-shadow: 0 2px 2px 0px #ddd;
 }
-body main #hero .text .firefox:hover {
-  border-color: hsl(229, 31%, 21%);
-  background-color: transparent;
-  box-shadow: none;
-}
 body main #feature {
   display: flex;
   flex-wrap: wrap;
@@ -199,10 +167,6 @@ body main #feature .panel ul li {
   padding: 20px 0;
   font-size: 0.9rem;
   color: #555;
-}
-body main #feature .panel ul li:hover {
-  cursor: pointer;
-  color: hsl(0, 94%, 66%);
 }
 body main #feature .panel ul li.current {
   border-bottom: 4px solid hsl(0, 94%, 66%);
@@ -323,9 +287,6 @@ body main #pricing .container .option .learnMore {
   bottom: 20px;
   transform: translateX(-50%);
 }
-body main #pricing .container .option .learnMore:hover {
-  background-color: hsl(229, 31%, 21%);
-}
 body main #pricing .container .free {
   border-radius: 10px 0 0 10px;
   background-color: hsla(231, 69%, 60%, 0.1);
@@ -418,16 +379,9 @@ body main #FAQs .questions article .title p {
   margin-right: 16px;
   color: hsl(229, 31%, 21%);
 }
-body main #FAQs .questions article .title p:hover {
-  cursor: pointer;
-  color: hsl(0, 94%, 66%);
-}
 body main #FAQs .questions article .title .arrow {
   content: url("images/icon-arrow.svg");
   width: 18px;
-}
-body main #FAQs .questions article .title .arrow:hover {
-  cursor: pointer;
 }
 body main #FAQs .questions article .answer {
   display: none;
@@ -531,11 +485,6 @@ body main #contact form button {
   background-color: hsl(0, 94%, 66%);
   color: white;
 }
-body main #contact form button:hover {
-  border-color: hsl(0, 94%, 66%);
-  background-color: white;
-  color: hsl(0, 94%, 66%);
-}
 body footer {
   padding: 30px 60px 16px 60px;
   background-color: hsl(229, 31%, 21%);
@@ -548,9 +497,6 @@ body footer .menu img {
   margin-right: 16px;
   filter: brightness(200%);
   vertical-align: middle;
-}
-body footer .menu img:hover {
-  cursor: pointer;
 }
 body footer .menu ul {
   display: inline-block;
@@ -567,17 +513,9 @@ body footer .menu ul li a {
   text-transform: uppercase;
   text-decoration: none;
 }
-body footer .menu ul li a:hover {
-  cursor: pointer;
-  color: hsl(0, 94%, 66%);
-}
 body footer .sns img {
   margin: 0 10px;
   width: 20px;
-}
-body footer .sns img:hover {
-  cursor: pointer;
-  filter: invert(51%) sepia(31%) saturate(6029%) hue-rotate(328deg) brightness(102%) contrast(97%);
 }
 body footer .attribution {
   margin-top: 20px;
@@ -591,6 +529,71 @@ body footer .attribution a {
   color: hsl(229, 8%, 60%);
 }
 
+@media screen and (hover: hover) {
+  body header nav #hamburgerIcon:hover,
+  body header nav #closeIcon:hover,
+  body header nav .sns:hover {
+    cursor: pointer;
+  }
+  body header nav .block ul li a:hover {
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+  }
+  body header nav .block ul button:hover {
+    cursor: pointer;
+    border-color: hsl(0, 94%, 66%);
+    background-color: transparent;
+    color: hsl(0, 94%, 66%);
+    box-shadow: none;
+  }
+  body main section button:hover {
+    cursor: pointer;
+  }
+  body main section .moreInfo:hover {
+    box-shadow: none;
+    transform: scale(1.05);
+  }
+  body main section .downloadBtn:hover {
+    border-color: hsl(231, 69%, 60%);
+    background-color: transparent;
+    color: hsl(231, 69%, 60%);
+  }
+  body main #hero .text .firefox:hover {
+    border-color: hsl(229, 31%, 21%);
+    background-color: transparent;
+    box-shadow: none;
+  }
+  body main #feature .panel ul li:hover {
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+  }
+  body main #pricing .container .option .learnMore:hover {
+    background-color: hsl(229, 31%, 21%);
+  }
+  body main #FAQs .questions article .title p:hover {
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+  }
+  body main #FAQs .questions article .title .arrow:hover {
+    cursor: pointer;
+  }
+  body main #contact form button:hover {
+    border-color: hsl(0, 94%, 66%);
+    background-color: white;
+    color: hsl(0, 94%, 66%);
+  }
+  body footer .menu img:hover {
+    cursor: pointer;
+  }
+  body footer .menu ul li a:hover {
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+  }
+  body footer .sns img:hover {
+    cursor: pointer;
+    filter: invert(51%) sepia(31%) saturate(6029%) hue-rotate(328deg) brightness(102%) contrast(97%);
+  }
+}
 @media screen and (max-width: 860px) {
   body header {
     margin-bottom: 40px;
@@ -682,9 +685,6 @@ body footer .attribution a {
     color: white;
     letter-spacing: 3px;
   }
-  body header nav.mobile .block ul li a:hover {
-    color: white;
-  }
   body header nav.mobile .block ul li:first-child {
     border-top: 1px solid #777;
   }
@@ -697,10 +697,6 @@ body footer .attribution a {
     letter-spacing: 4px;
     box-shadow: none;
   }
-  body header nav.mobile .block ul button:hover {
-    border-color: white;
-    color: white;
-  }
   body header nav.mobile .sns {
     align-self: flex-end;
     display: block;
@@ -708,9 +704,6 @@ body footer .attribution a {
   body header nav.mobile .sns img {
     margin: 0 12px;
     width: 20px;
-  }
-  body header nav.mobile .sns img:hover {
-    cursor: pointer;
   }
   body main section hgroup {
     padding: 0 40px;
@@ -885,6 +878,18 @@ body footer .attribution a {
   }
   body footer .sns {
     text-align: center;
+  }
+}
+@media screen and (max-width: 760px) and (hover: hover) {
+  body header nav.mobile .block ul li a:hover {
+    color: white;
+  }
+  body header nav.mobile .block ul button:hover {
+    border-color: white;
+    color: white;
+  }
+  body header nav.mobile .sns img:hover {
+    cursor: pointer;
   }
 }
 @media screen and (max-width: 480px) {
