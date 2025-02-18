@@ -52,10 +52,6 @@ body {
             #closeIcon,
             .sns {
                 display: none;
-
-                // &:hover {
-                //     cursor: pointer;
-                // }
             }
 
             .block {
@@ -75,11 +71,6 @@ body {
                         a {
                             color: $very_dark_blue;
                             text-decoration: none;
-
-                            // &:hover {
-                            //     cursor: pointer;
-                            //     color: $soft_red;
-                            // }
                         }
                     }
 
@@ -91,14 +82,6 @@ body {
                         background-color: $soft_red;
                         color: white;
                         box-shadow: 0 2px 4px 0px #ccc;
-
-                        // &:hover {
-                        //     cursor: pointer;
-                        //     border-color: $soft_red;
-                        //     background-color: transparent;
-                        //     color: $soft_red;
-                        //     box-shadow: none;
-                        // }
                     }
                 }
             }
@@ -131,10 +114,6 @@ body {
                 border-radius: 6px;
                 font-size: 0.85rem;
                 font-weight: 300;
-
-                // &:hover {
-                //     cursor: pointer;
-                // }
             }
 
             .moreInfo {
@@ -143,11 +122,6 @@ body {
                 background-color: $soft_blue;
                 color: white;
                 box-shadow: 0 2px 4px 0px #ccc;
-
-                // &:hover {
-                //     box-shadow: none;
-                //     transform: scale(1.05);
-                // }
             }
 
             .downloadBtn {
@@ -156,12 +130,6 @@ body {
                 border: 2px solid transparent;
                 background-color: $soft_blue;
                 color: white;
-
-                // &:hover {
-                //     border-color: $soft_blue;
-                //     background-color: transparent;
-                //     color: $soft_blue;
-                // }
             }
         }
 
@@ -210,12 +178,6 @@ body {
                     background-color: #eee;
                     color: $very_dark_blue;
                     box-shadow: 0 2px 2px 0px #ddd;
-
-                    // &:hover {
-                    //     border-color: $very_dark_blue;
-                    //     background-color: transparent;
-                    //     box-shadow: none;
-                    // }
                 }
             }
         }
@@ -242,11 +204,6 @@ body {
                         padding: 20px 0;
                         font-size: 0.9rem;
                         color: #555;
-
-                        // &:hover {
-                        //     cursor: pointer;
-                        //     color: $soft_red;
-                        // }
                     }
 
                     li.current {
@@ -392,10 +349,6 @@ body {
                         left: 50%;
                         bottom: 20px;
                         transform: translateX(-50%);
-
-                        // &:hover {
-                        //     background-color: $very_dark_blue;
-                        // }
                     }
                 }
 
@@ -513,20 +466,11 @@ body {
                         p {
                             margin-right: 16px;
                             color: $very_dark_blue;
-
-                            // &:hover {
-                            //     cursor: pointer;
-                            //     color: $soft_red;
-                            // }
                         }
 
                         .arrow {
                             content: url("images/icon-arrow.svg");
                             width: 18px;
-
-                            // &:hover {
-                            //     cursor: pointer;
-                            // }
                         }
                     }
 
@@ -654,12 +598,6 @@ body {
                     border: 2px solid transparent;
                     background-color: $soft_red;
                     color: white;
-
-                    // &:hover {
-                    //     border-color: $soft_red;
-                    //     background-color: white;
-                    //     color: $soft_red;
-                    // }
                 }
             }
         }
@@ -678,10 +616,6 @@ body {
                 margin-right: 16px;
                 filter: brightness(200%);
                 vertical-align: middle;
-
-                // &:hover {
-                //     cursor: pointer;
-                // }
             }
 
             ul {
@@ -698,11 +632,6 @@ body {
                         letter-spacing: 1px;
                         text-transform: uppercase;
                         text-decoration: none;
-
-                        // &:hover {
-                        //     cursor: pointer;
-                        //     color: $soft_red;
-                        // }
                     }
                 }
             }
@@ -712,11 +641,6 @@ body {
             img {
                 margin: 0 10px;
                 width: 20px;
-
-                // &:hover {
-                //     cursor: pointer;
-                //     filter: invert(51%) sepia(31%) saturate(6029%) hue-rotate(328deg) brightness(102%) contrast(97%);
-                // }
             }
         }
 
@@ -956,10 +880,6 @@ body {
                                 font-weight: 100;
                                 color: white;
                                 letter-spacing: 3px;
-
-                                // &:hover {
-                                //     color: white;
-                                // }
                             }
                         }
 
@@ -975,11 +895,6 @@ body {
                             background-color: transparent;
                             letter-spacing: 4px;
                             box-shadow: none;
-
-                            // &:hover {
-                            //     border-color: white;
-                            //     color: white;
-                            // }
                         }
                     }
                 }
@@ -991,10 +906,6 @@ body {
                     img {
                         margin: 0 12px;
                         width: 20px;
-
-                        // &:hover {
-                        //     cursor: pointer;
-                        // }
                     }
                 }
             }
