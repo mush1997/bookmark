@@ -68,7 +68,7 @@ let validation;
 function checkEmailAddr(event) {
     event.preventDefault();
     checkInputValue();
-    
+
     if (validation) {
         form.reset();
         alert("Thank you! We will contact you soon!");
@@ -87,3 +87,6 @@ function checkInputValue() {
 
 form.addEventListener("submit", checkEmailAddr);
 input.addEventListener("input", checkInputValue);
+
+/* others */
+document.querySelector("footer .menu img").addEventListener("click", () => window.location.href = "index.html");

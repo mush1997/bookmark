@@ -549,6 +549,9 @@ body footer .menu img {
   filter: brightness(200%);
   vertical-align: middle;
 }
+body footer .menu img:hover {
+  cursor: pointer;
+}
 body footer .menu ul {
   display: inline-block;
 }

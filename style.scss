@@ -677,6 +677,10 @@ body {
                 margin-right: 16px;
                 filter: brightness(200%);
                 vertical-align: middle;
+
+                &:hover{
+                    cursor: pointer;
+                }
             }
 
             ul {
