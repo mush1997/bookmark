@@ -123,12 +123,27 @@ body {
                 box-shadow: 0 2px 4px 0px #ccc;
             }
 
+            .chrome,
+            .firefox,
             .downloadBtn {
                 width: 160px;
                 height: 44px;
                 border: 2px solid transparent;
                 background-color: $soft_blue;
                 color: white;
+            }
+
+            .chrome,
+            .firefox {
+                margin-top: 10px;
+                padding: 12px 20px;
+                font-size: 0.85rem;
+                font-weight: 300;
+                border-radius: 6px;
+                text-decoration: none;
+                text-align: center;
+                vertical-align: middle;
+                display: inline-block;
             }
         }
 
@@ -174,8 +189,8 @@ body {
                 }
 
                 .firefox {
-                    background-color: #eee;
                     color: $very_dark_blue;
+                    background-color: #eee;
                     box-shadow: 0 2px 2px 0px #ddd;
                 }
             }
@@ -695,6 +710,13 @@ body {
                     transform: scale(1.05);
                 }
 
+                .chrome:hover,
+                .firefox:hover {
+                    border-color: $soft_blue;
+                    background-color: transparent;
+                    color: $soft_blue;
+                }
+
                 .downloadBtn:hover {
                     border-color: $soft_blue;
                     background-color: transparent;
@@ -1182,7 +1204,9 @@ body {
                 .text {
                     padding: 0px;
 
-                    button {
+                    button,
+                    .chrome,
+                    .firefox {
                         width: 100%;
                     }
 

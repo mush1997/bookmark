@@ -96,12 +96,26 @@ body main section .moreInfo {
   color: white;
   box-shadow: 0 2px 4px 0px #ccc;
 }
+body main section .chrome,
+body main section .firefox,
 body main section .downloadBtn {
   width: 160px;
   height: 44px;
   border: 2px solid transparent;
   background-color: hsl(231, 69%, 60%);
   color: white;
+}
+body main section .chrome,
+body main section .firefox {
+  margin-top: 10px;
+  padding: 12px 20px;
+  font-size: 0.85rem;
+  font-weight: 300;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
 }
 body main #hero {
   padding-right: 0;
@@ -140,8 +154,8 @@ body main #hero .text .chrome {
   margin-right: 10px;
 }
 body main #hero .text .firefox {
-  background-color: #eee;
   color: hsl(229, 31%, 21%);
+  background-color: #eee;
   box-shadow: 0 2px 2px 0px #ddd;
 }
 body main #feature {
@@ -552,6 +566,12 @@ body footer .attribution a {
     box-shadow: none;
     transform: scale(1.05);
   }
+  body main section .chrome:hover,
+  body main section .firefox:hover {
+    border-color: hsl(231, 69%, 60%);
+    background-color: transparent;
+    color: hsl(231, 69%, 60%);
+  }
   body main section .downloadBtn:hover {
     border-color: hsl(231, 69%, 60%);
     background-color: transparent;
@@ -904,7 +924,9 @@ body footer .attribution a {
   body main #hero .text {
     padding: 0px;
   }
-  body main #hero .text button {
+  body main #hero .text button,
+  body main #hero .text .chrome,
+  body main #hero .text .firefox {
     width: 100%;
   }
   body main #hero .text .chrome {
