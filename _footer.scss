@@ -1,13 +1,14 @@
 body {
     footer {
         padding: 30px 60px 16px 60px;
+        width: 100%;
         background-color: $very_dark_blue;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
 
-        .menu {
+        nav {
             img {
                 margin-right: 16px;
                 filter: brightness(200%);
@@ -33,7 +34,7 @@ body {
             }
         }
 
-        .sns {
+        div {
             img {
                 margin: 0 10px;
                 width: 20px;
@@ -57,7 +58,7 @@ body {
 
 @media screen and (hover:hover) {
     body footer {
-        .menu {
+        nav {
             img:hover {
                 cursor: pointer;
             }
@@ -68,7 +69,7 @@ body {
             }
         }
 
-        .sns img:hover {
+        div img:hover {
             cursor: pointer;
             filter: invert(51%) sepia(31%) saturate(6029%) hue-rotate(328deg) brightness(102%) contrast(97%);
         }
@@ -79,7 +80,7 @@ body {
     body footer {
         display: block;
 
-        .menu {
+        nav {
             margin-bottom: 30px;
             text-align: center;
 
@@ -102,7 +103,7 @@ body {
             }
         }
 
-        .sns {
+        div {
             text-align: center;
         }
     }

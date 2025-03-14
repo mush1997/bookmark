@@ -89,4 +89,4 @@ form.addEventListener("submit", checkEmailAddr);
 input.addEventListener("input", checkInputValue);
 
 /* others */
-document.querySelector("footer .menu img").addEventListener("click", () => window.location.href = "index.html");
+document.querySelector("footer nav img").addEventListener("click", () => window.location.href = "index.html");

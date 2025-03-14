@@ -19,6 +19,7 @@ h3 {
 body header {
   margin-bottom: 60px;
   padding: 30px 70px;
+  width: 100%;
 }
 body header nav {
   display: flex;
@@ -174,6 +175,9 @@ body header nav > div ul button {
   to {
     opacity: 1;
   }
+}
+body main {
+  width: 100%;
 }
 body main section {
   margin-bottom: 60px;
@@ -943,24 +947,25 @@ body main #contact form button {
 }
 body footer {
   padding: 30px 60px 16px 60px;
+  width: 100%;
   background-color: hsl(229, 31%, 21%);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
-body footer .menu img {
+body footer nav img {
   margin-right: 16px;
   filter: brightness(200%);
   vertical-align: middle;
 }
-body footer .menu ul {
+body footer nav ul {
   display: inline-block;
 }
-body footer .menu ul li {
+body footer nav ul li {
   display: inline-block;
 }
-body footer .menu ul li a {
+body footer nav ul li a {
   margin: 0 16px;
   font-size: 0.7rem;
   font-weight: 100;
@@ -969,7 +974,7 @@ body footer .menu ul li a {
   text-transform: uppercase;
   text-decoration: none;
 }
-body footer .sns img {
+body footer div img {
   margin: 0 10px;
   width: 20px;
 }
@@ -986,14 +991,14 @@ body footer .attribution a {
 }
 
 @media screen and (hover: hover) {
-  body footer .menu img:hover {
+  body footer nav img:hover {
     cursor: pointer;
   }
-  body footer .menu ul li a:hover {
+  body footer nav ul li a:hover {
     cursor: pointer;
     color: hsl(0, 94%, 66%);
   }
-  body footer .sns img:hover {
+  body footer div img:hover {
     cursor: pointer;
     filter: invert(51%) sepia(31%) saturate(6029%) hue-rotate(328deg) brightness(102%) contrast(97%);
   }
@@ -1002,25 +1007,25 @@ body footer .attribution a {
   body footer {
     display: block;
   }
-  body footer .menu {
+  body footer nav {
     margin-bottom: 30px;
     text-align: center;
   }
-  body footer .menu img {
+  body footer nav img {
     margin-right: 0;
   }
-  body footer .menu ul {
+  body footer nav ul {
     display: block;
   }
-  body footer .menu ul li {
+  body footer nav ul li {
     margin: 16px 0;
     display: block;
   }
-  body footer .menu ul li a {
+  body footer nav ul li a {
     margin: 0;
     letter-spacing: 2px;
   }
-  body footer .sns {
+  body footer div {
     text-align: center;
   }
 }
