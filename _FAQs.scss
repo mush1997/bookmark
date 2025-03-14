@@ -1,0 +1,110 @@
+body main {
+    #FAQs {
+        margin-bottom: 90px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .questions {
+            width: 55%;
+
+            article {
+                .first {
+                    border-top: 2px solid #ddd;
+                }
+
+                .title {
+                    border-bottom: 2px solid #ddd;
+                    padding-right: 16px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    p {
+                        margin-right: 16px;
+                        color: $very_dark_blue;
+                    }
+
+                    .arrow {
+                        content: url("images/icon-arrow.svg");
+                        width: 18px;
+                    }
+                }
+
+                .answer {
+                    display: none;
+                    font-size: 0.9rem;
+                    font-weight: 300;
+                    color: gray;
+                    line-height: 1.6;
+                }
+            }
+
+            article.unfolded {
+                .title {
+                    border-bottom: none;
+
+                    .arrow {
+                        transform: rotate(180deg);
+                        filter: invert(51%) sepia(31%) saturate(6029%) hue-rotate(328deg) brightness(102%) contrast(97%);
+                    }
+                }
+
+                .answer {
+                    display: block;
+                    animation: showing 1.5s forwards;
+                }
+            }
+        }
+
+        div:last-child {
+            margin-top: 40px;
+            width: 100%;
+            text-align: center;
+
+            button {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@media screen and (hover:hover) {
+    body main #FAQs .questions article .title {
+        p:hover {
+            cursor: pointer;
+            color: $soft_red;
+        }
+
+        .arrow:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width:760px) {
+    body main #FAQs {
+        display: block;
+
+        .questions {
+            padding: 40px;
+            width: 100%;
+        }
+
+        div:last-child {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    body main #FAQs {
+        hgroup {
+            padding: 0;
+        }
+
+        .questions {
+            padding: 10px;
+        }
+    }
+}

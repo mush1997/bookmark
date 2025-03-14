@@ -1,0 +1,117 @@
+body main {
+    #download {
+        margin-bottom: 120px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .extensions {
+            display: flex;
+            justify-content: center;
+
+            .card {
+                flex-basis: 20%;
+                min-width: 200px;
+                margin: 0 16px;
+                padding: 16px 0;
+                border-radius: 10px;
+                background-color: white;
+                box-shadow: 0 4px 16px 2px #ccc;
+                text-align: center;
+
+                .icon {
+                    margin-bottom: 20px;
+                    width: 36%;
+                }
+
+                .opera {
+                    width: 33%;
+                }
+
+                .dots {
+                    width: 100%;
+                }
+
+                h3 {
+                    margin: 0 16px;
+                    font-size: 1.25rem;
+                }
+
+                p {
+                    margin: 10px 16px;
+                    font-size: 0.9rem;
+                    font-weight: 200;
+                }
+
+                button {
+                    margin: 20px 16px 0 16px;
+                }
+            }
+
+            .card:nth-of-type(2) {
+                position: relative;
+                top: 30px;
+            }
+
+            .card:nth-of-type(3) {
+                position: relative;
+                top: 60px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:760px) {
+    body main #download {
+        margin-bottom: 90px;
+        display: block;
+
+        .extensions {
+            margin: 40px auto 0 auto;
+            padding: 0 40px;
+            width: 85%;
+            display: block;
+
+            .card {
+                min-width: auto;
+                margin: 24px 0;
+                padding: 30px 0;
+
+                .icon {
+                    margin-bottom: 20px;
+                    width: 20%;
+                }
+
+                .opera {
+                    width: 20%;
+                }
+
+                button {
+                    margin: 20px 0 0 0;
+                    width: 80%;
+                }
+            }
+
+            .card:nth-of-type(2),
+            .card:nth-of-type(3) {
+                position: static;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    body main #download {
+        margin-bottom: 60px;
+
+        hgroup {
+            padding: 0;
+        }
+
+        .extensions {
+            padding: 0 10px;
+            width: 100%;
+            max-width: 320px;
+        }
+    }
+}

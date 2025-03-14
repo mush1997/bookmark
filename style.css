@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,14 +16,6 @@ h3 {
   color: hsl(229, 31%, 21%);
 }
 
-@keyframes showing {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 body header {
   margin-bottom: 60px;
   padding: 30px 70px;
@@ -35,29 +28,29 @@ body header nav {
 body header nav .logo {
   margin-right: 16px;
   width: 15%;
-  max-width: 180px;
   min-width: 150px;
+  max-width: 180px;
 }
-body header nav #hamburgerIcon,
-body header nav #closeIcon,
+body header nav #openMenuIcon,
+body header nav #closeMenuIcon,
 body header nav .sns {
   display: none;
 }
-body header nav .block ul li a,
-body header nav .block ul button {
+body header nav > div ul li a,
+body header nav > div ul button {
   margin: 0 16px;
   font-size: 0.9rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-body header nav .block ul li {
+body header nav > div ul li {
   display: inline-block;
 }
-body header nav .block ul li a {
+body header nav > div ul li a {
   color: hsl(229, 31%, 21%);
   text-decoration: none;
 }
-body header nav .block ul button {
+body header nav > div ul button {
   margin-right: 0;
   padding: 8px 24px;
   border-radius: 6px;
@@ -65,6 +58,122 @@ body header nav .block ul button {
   background-color: hsl(0, 94%, 66%);
   color: white;
   box-shadow: 0 2px 4px 0px #ccc;
+}
+
+@media screen and (hover: hover) {
+  body header nav #openMenuIcon:hover,
+  body header nav #closeMenuIcon:hover {
+    cursor: pointer;
+  }
+  body header nav > div ul li a:hover {
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+  }
+  body header nav > div ul button:hover {
+    cursor: pointer;
+    border-color: hsl(0, 94%, 66%);
+    background-color: transparent;
+    color: hsl(0, 94%, 66%);
+    box-shadow: none;
+  }
+  body header nav.showMenu > div ul li a:hover {
+    color: white;
+  }
+  body header nav.showMenu > div ul button:hover {
+    border-color: white;
+    color: white;
+  }
+  body header nav.showMenu .sns img:hover {
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 860px) {
+  body header {
+    margin-bottom: 40px;
+    padding: 30px 50px;
+  }
+}
+@media screen and (max-width: 760px) {
+  body header nav #openMenuIcon {
+    display: block;
+  }
+  body header nav > div {
+    display: none;
+  }
+  body header nav.showMenu #openMenuIcon {
+    display: none;
+  }
+  body header nav.showMenu #closeMenuIcon {
+    display: block;
+    z-index: 15;
+  }
+  body header nav.showMenu > div {
+    padding: 40px 40px 20px 40px;
+    background-color: hsl(229, 31%, 21%);
+    opacity: 0.9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    overflow: auto;
+  }
+  body header nav.showMenu > div ul {
+    margin: 60px 60px 30px 60px;
+    width: 100%;
+    text-align: center;
+  }
+  body header nav.showMenu > div ul li {
+    padding: 20px 0;
+    width: 100%;
+    border-bottom: 1px solid #777;
+    display: block;
+  }
+  body header nav.showMenu > div ul li a {
+    font-weight: 100;
+    color: white;
+    letter-spacing: 3px;
+  }
+  body header nav.showMenu > div ul li:first-child {
+    border-top: 1px solid #777;
+  }
+  body header nav.showMenu > div ul button {
+    margin: 20px 0 0 0;
+    padding: 12px 0;
+    width: 120px;
+    border-color: white;
+    background-color: transparent;
+    letter-spacing: 4px;
+    box-shadow: none;
+  }
+  body header nav.showMenu .sns {
+    align-self: flex-end;
+    display: block;
+  }
+  body header nav.showMenu .sns img {
+    margin: 0 12px;
+    width: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  body header {
+    padding: 30px;
+  }
+  body header nav.showMenu > div ul {
+    margin: 60px 24px 30px 24px;
+  }
+}
+@keyframes showing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 body main section {
   margin-bottom: 60px;
@@ -121,6 +230,49 @@ body main section .downloadBtn {
   padding: 2px 0;
   height: 48px;
 }
+
+@media screen and (hover: hover) {
+  body main section button:hover {
+    cursor: pointer;
+  }
+  body main section .moreInfo:hover {
+    box-shadow: none;
+    transform: scale(1.05);
+  }
+  body main section .chrome:hover,
+  body main section .firefox:hover {
+    border-color: hsl(231, 69%, 60%);
+    background-color: transparent;
+    color: hsl(231, 69%, 60%);
+  }
+  body main section .downloadBtn:hover {
+    border-color: hsl(231, 69%, 60%);
+    background-color: transparent;
+    color: hsl(231, 69%, 60%);
+  }
+}
+@media screen and (max-width: 860px) {
+  body main section {
+    padding: 20px 30px;
+  }
+  body main section hgroup {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 760px) {
+  body main section hgroup {
+    padding: 0 40px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  body main section {
+    padding: 30px;
+  }
+  body main section hgroup {
+    padding: 0 30px;
+  }
+}
 body main #hero {
   padding-right: 0;
   display: flex;
@@ -161,6 +313,50 @@ body main #hero .text .firefox {
   color: hsl(229, 31%, 21%);
   background-color: #eee;
   box-shadow: 0 2px 2px 0px #ddd;
+}
+
+@media screen and (hover: hover) {
+  body main #hero .text .firefox:hover {
+    border-color: hsl(229, 31%, 21%);
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 860px) {
+  body main #hero .text {
+    padding: 30px 20px;
+  }
+}
+@media screen and (max-width: 760px) {
+  body main #hero {
+    display: block;
+  }
+  body main #hero .heroPic {
+    min-width: auto;
+    text-align: center;
+  }
+  body main #hero .heroPic img {
+    padding-right: 0;
+    width: 90%;
+  }
+  body main #hero .text {
+    margin: 40px 30px 0 0;
+    padding: 30px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  body main #hero .text {
+    padding: 0px;
+  }
+  body main #hero .text button,
+  body main #hero .text .chrome,
+  body main #hero .text .firefox {
+    width: 100%;
+  }
+  body main #hero .text .chrome {
+    margin-right: 0;
+  }
 }
 body main #feature {
   display: flex;
@@ -233,6 +429,76 @@ body main #feature article:first-of-type .pic div {
   width: 95%;
   aspect-ratio: 5/2;
   bottom: -10%;
+}
+
+@media screen and (hover: hover) {
+  body main #feature .panel ul li:hover {
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+  }
+}
+@media screen and (max-width: 860px) {
+  body main #feature {
+    padding: 20px 0;
+  }
+  body main #feature .panel {
+    width: 70%;
+  }
+  body main #feature article {
+    padding: 10px 0;
+  }
+  body main #feature article .content {
+    padding: 30px 50px;
+  }
+}
+@media screen and (max-width: 760px) {
+  body main #feature {
+    display: block;
+  }
+  body main #feature .panel {
+    margin: -30px auto 0 auto;
+    padding: 40px;
+    width: 95%;
+  }
+  body main #feature .panel ul {
+    display: block;
+  }
+  body main #feature .panel ul li {
+    border-top: 2px solid #ddd;
+    text-align: center;
+  }
+  body main #feature article .pic {
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+  }
+  body main #feature article .pic img {
+    width: 65%;
+    min-width: auto;
+  }
+  body main #feature article .pic div {
+    width: 60%;
+    border-radius: 0 100px 100px 0;
+    bottom: -2%;
+  }
+  body main #feature article .content {
+    padding: 40px;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  body main #feature article:first-of-type .pic div {
+    width: 75%;
+    aspect-ratio: 2/1;
+  }
+}
+@media screen and (max-width: 480px) {
+  body main #feature article {
+    padding-bottom: 0;
+  }
+  body main #feature article .content {
+    padding: 30px 30px 10px 30px;
+  }
 }
 body main #pricing {
   display: flex;
@@ -323,6 +589,75 @@ body main #pricing .container .premium {
   border-radius: 0 10px 10px 0;
   background-color: hsla(231, 69%, 60%, 0.7);
 }
+
+@media screen and (hover: hover) {
+  body main #pricing .container .option .learnMore:hover {
+    background-color: hsl(229, 31%, 21%);
+  }
+}
+@media screen and (max-width: 860px) {
+  body main #pricing .container {
+    width: 90%;
+  }
+  body main #pricing .container .option {
+    flex: 1 0 200px;
+  }
+  body main #pricing .container .option hgroup p {
+    width: 100%;
+    min-width: auto;
+  }
+  body main #pricing .container .option ul {
+    padding: 10px 0;
+  }
+  body main #pricing .container .option .learnMore {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 760px) {
+  body main #pricing {
+    display: block;
+  }
+  body main #pricing .container {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+  }
+  body main #pricing .container .option {
+    width: 100%;
+    min-height: auto;
+    display: block;
+    text-align: center;
+  }
+  body main #pricing .container .option hgroup p {
+    width: 100%;
+    max-width: 300px;
+  }
+  body main #pricing .container .option ul {
+    margin: 0 auto;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 330px;
+  }
+  body main #pricing .container .option ul li {
+    text-align: center;
+  }
+  body main #pricing .container .option .learnMore {
+    width: auto;
+    position: static;
+    transform: none;
+  }
+  body main #pricing .container .free {
+    border-radius: 10px 10px 0 0;
+  }
+  body main #pricing .container .premium {
+    border-radius: 0 0 10px 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  body main #pricing .container {
+    width: 90%;
+  }
+}
 body main #download {
   margin-bottom: 120px;
   display: flex;
@@ -372,6 +707,52 @@ body main #download .extensions .card:nth-of-type(2) {
 body main #download .extensions .card:nth-of-type(3) {
   position: relative;
   top: 60px;
+}
+
+@media screen and (max-width: 760px) {
+  body main #download {
+    margin-bottom: 90px;
+    display: block;
+  }
+  body main #download .extensions {
+    margin: 40px auto 0 auto;
+    padding: 0 40px;
+    width: 85%;
+    display: block;
+  }
+  body main #download .extensions .card {
+    min-width: auto;
+    margin: 24px 0;
+    padding: 30px 0;
+  }
+  body main #download .extensions .card .icon {
+    margin-bottom: 20px;
+    width: 20%;
+  }
+  body main #download .extensions .card .opera {
+    width: 20%;
+  }
+  body main #download .extensions .card button {
+    margin: 20px 0 0 0;
+    width: 80%;
+  }
+  body main #download .extensions .card:nth-of-type(2),
+  body main #download .extensions .card:nth-of-type(3) {
+    position: static;
+  }
+}
+@media screen and (max-width: 480px) {
+  body main #download {
+    margin-bottom: 60px;
+  }
+  body main #download hgroup {
+    padding: 0;
+  }
+  body main #download .extensions {
+    padding: 0 10px;
+    width: 100%;
+    max-width: 320px;
+  }
 }
 body main #FAQs {
   margin-bottom: 90px;
@@ -425,6 +806,36 @@ body main #FAQs div:last-child {
 }
 body main #FAQs div:last-child button {
   margin-top: 0;
+}
+
+@media screen and (hover: hover) {
+  body main #FAQs .questions article .title p:hover {
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+  }
+  body main #FAQs .questions article .title .arrow:hover {
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 760px) {
+  body main #FAQs {
+    display: block;
+  }
+  body main #FAQs .questions {
+    padding: 40px;
+    width: 100%;
+  }
+  body main #FAQs div:last-child {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  body main #FAQs hgroup {
+    padding: 0;
+  }
+  body main #FAQs .questions {
+    padding: 10px;
+  }
 }
 body main #contact {
   margin-bottom: 0;
@@ -502,6 +913,34 @@ body main #contact form button {
   background-color: hsl(0, 94%, 66%);
   color: white;
 }
+
+@media screen and (hover: hover) {
+  body main #contact form button:hover {
+    border-color: hsl(0, 94%, 66%);
+    background-color: white;
+    color: hsl(0, 94%, 66%);
+  }
+}
+@media screen and (max-width: 760px) {
+  body main #contact form {
+    padding: 0 40px;
+    display: block;
+  }
+  body main #contact form div {
+    margin: 0 0 20px 0;
+  }
+  body main #contact form div input {
+    width: 100%;
+  }
+  body main #contact form button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  body main #contact form {
+    padding: 0;
+  }
+}
 body footer {
   padding: 30px 60px 16px 60px;
   background-color: hsl(229, 31%, 21%);
@@ -547,64 +986,6 @@ body footer .attribution a {
 }
 
 @media screen and (hover: hover) {
-  body header nav #hamburgerIcon:hover,
-  body header nav #closeIcon:hover,
-  body header nav .sns:hover {
-    cursor: pointer;
-  }
-  body header nav .block ul li a:hover {
-    cursor: pointer;
-    color: hsl(0, 94%, 66%);
-  }
-  body header nav .block ul button:hover {
-    cursor: pointer;
-    border-color: hsl(0, 94%, 66%);
-    background-color: transparent;
-    color: hsl(0, 94%, 66%);
-    box-shadow: none;
-  }
-  body main section button:hover {
-    cursor: pointer;
-  }
-  body main section .moreInfo:hover {
-    box-shadow: none;
-    transform: scale(1.05);
-  }
-  body main section .chrome:hover,
-  body main section .firefox:hover {
-    border-color: hsl(231, 69%, 60%);
-    background-color: transparent;
-    color: hsl(231, 69%, 60%);
-  }
-  body main section .downloadBtn:hover {
-    border-color: hsl(231, 69%, 60%);
-    background-color: transparent;
-    color: hsl(231, 69%, 60%);
-  }
-  body main #hero .text .firefox:hover {
-    border-color: hsl(229, 31%, 21%);
-    background-color: transparent;
-    box-shadow: none;
-  }
-  body main #feature .panel ul li:hover {
-    cursor: pointer;
-    color: hsl(0, 94%, 66%);
-  }
-  body main #pricing .container .option .learnMore:hover {
-    background-color: hsl(229, 31%, 21%);
-  }
-  body main #FAQs .questions article .title p:hover {
-    cursor: pointer;
-    color: hsl(0, 94%, 66%);
-  }
-  body main #FAQs .questions article .title .arrow:hover {
-    cursor: pointer;
-  }
-  body main #contact form button:hover {
-    border-color: hsl(0, 94%, 66%);
-    background-color: white;
-    color: hsl(0, 94%, 66%);
-  }
   body footer .menu img:hover {
     cursor: pointer;
   }
@@ -617,267 +998,7 @@ body footer .attribution a {
     filter: invert(51%) sepia(31%) saturate(6029%) hue-rotate(328deg) brightness(102%) contrast(97%);
   }
 }
-@media screen and (max-width: 860px) {
-  body header {
-    margin-bottom: 40px;
-    padding: 30px 50px;
-  }
-  body main section {
-    padding: 20px 30px;
-  }
-  body main section hgroup {
-    width: 65%;
-  }
-  body main #hero .text {
-    padding: 30px 20px;
-  }
-  body main #feature {
-    padding: 20px 0;
-  }
-  body main #feature .panel {
-    width: 70%;
-  }
-  body main #feature article {
-    padding: 10px 0;
-  }
-  body main #feature article .content {
-    padding: 30px 50px;
-  }
-  body main #pricing .container {
-    width: 90%;
-  }
-  body main #pricing .container .option {
-    flex: 1 0 200px;
-  }
-  body main #pricing .container .option hgroup p {
-    width: 100%;
-    min-width: auto;
-  }
-  body main #pricing .container .option ul {
-    padding: 10px 0;
-  }
-  body main #pricing .container .option .learnMore {
-    width: 75%;
-  }
-}
 @media screen and (max-width: 760px) {
-  body header nav #hamburgerIcon {
-    display: block;
-  }
-  body header nav .block {
-    display: none;
-  }
-  body header nav.mobile .logo {
-    z-index: 15;
-    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(332deg) brightness(105%) contrast(102%);
-  }
-  body header nav.mobile #hamburgerIcon {
-    display: none;
-  }
-  body header nav.mobile #closeIcon {
-    display: block;
-    z-index: 15;
-  }
-  body header nav.mobile .block {
-    padding: 40px 40px 20px 40px;
-    background-color: hsl(229, 31%, 21%);
-    opacity: 0.9;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 10;
-    overflow: auto;
-  }
-  body header nav.mobile .block ul {
-    margin: 60px 0 30px 0;
-    width: 100%;
-  }
-  body header nav.mobile .block ul li {
-    padding: 20px 0;
-    border-bottom: 1px solid #777;
-    text-align: center;
-    display: block;
-  }
-  body header nav.mobile .block ul li a {
-    font-weight: 100;
-    color: white;
-    letter-spacing: 3px;
-  }
-  body header nav.mobile .block ul li:first-child {
-    border-top: 1px solid #777;
-  }
-  body header nav.mobile .block ul button {
-    margin: 20px 0 0 0;
-    padding: 12px 0;
-    width: 100%;
-    border-color: white;
-    background-color: transparent;
-    letter-spacing: 4px;
-    box-shadow: none;
-  }
-  body header nav.mobile .sns {
-    align-self: flex-end;
-    display: block;
-  }
-  body header nav.mobile .sns img {
-    margin: 0 12px;
-    width: 20px;
-  }
-  body main section hgroup {
-    padding: 0 40px;
-    width: 100%;
-  }
-  body main #hero {
-    display: block;
-  }
-  body main #hero .heroPic {
-    min-width: auto;
-    text-align: center;
-  }
-  body main #hero .heroPic img {
-    padding-right: 0;
-    width: 90%;
-  }
-  body main #hero .text {
-    margin: 40px 30px 0 0;
-    padding: 30px;
-    text-align: center;
-  }
-  body main #feature {
-    display: block;
-  }
-  body main #feature .panel {
-    margin: -30px auto 0 auto;
-    padding: 40px;
-    width: 95%;
-  }
-  body main #feature .panel ul {
-    display: block;
-  }
-  body main #feature .panel ul li {
-    border-top: 2px solid #ddd;
-    text-align: center;
-  }
-  body main #feature article .pic {
-    margin-bottom: 30px;
-    width: 100%;
-    text-align: center;
-  }
-  body main #feature article .pic img {
-    width: 65%;
-    min-width: auto;
-  }
-  body main #feature article .pic div {
-    width: 60%;
-    border-radius: 0 100px 100px 0;
-    bottom: -2%;
-  }
-  body main #feature article .content {
-    padding: 40px;
-    width: 100%;
-    display: block;
-    text-align: center;
-  }
-  body main #feature article:first-of-type .pic div {
-    width: 75%;
-    aspect-ratio: 2/1;
-  }
-  body main #pricing {
-    display: block;
-  }
-  body main #pricing .container {
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-  }
-  body main #pricing .container .option {
-    width: 100%;
-    min-height: auto;
-    display: block;
-    text-align: center;
-  }
-  body main #pricing .container .option hgroup p {
-    width: 100%;
-    max-width: 300px;
-  }
-  body main #pricing .container .option ul {
-    margin: 0 auto;
-    padding: 10px 20px;
-    width: 100%;
-    max-width: 330px;
-  }
-  body main #pricing .container .option ul li {
-    text-align: center;
-  }
-  body main #pricing .container .option .learnMore {
-    width: auto;
-    position: static;
-    transform: none;
-  }
-  body main #pricing .container .free {
-    border-radius: 10px 10px 0 0;
-  }
-  body main #pricing .container .premium {
-    border-radius: 0 0 10px 10px;
-  }
-  body main #download {
-    margin-bottom: 90px;
-    display: block;
-  }
-  body main #download .extensions {
-    margin: 40px auto 0 auto;
-    padding: 0 40px;
-    width: 85%;
-    display: block;
-  }
-  body main #download .extensions .card {
-    min-width: auto;
-    margin: 24px 0;
-    padding: 30px 0;
-  }
-  body main #download .extensions .card .icon {
-    margin-bottom: 20px;
-    width: 20%;
-  }
-  body main #download .extensions .card .opera {
-    width: 20%;
-  }
-  body main #download .extensions .card button {
-    margin: 20px 0 0 0;
-    width: 80%;
-  }
-  body main #download .extensions .card:nth-of-type(2),
-  body main #download .extensions .card:nth-of-type(3) {
-    position: static;
-  }
-  body main #FAQs {
-    display: block;
-  }
-  body main #FAQs .questions {
-    padding: 40px;
-    width: 100%;
-  }
-  body main #FAQs div:last-child {
-    margin-top: 10px;
-  }
-  body main #contact form {
-    padding: 0 40px;
-    display: block;
-  }
-  body main #contact form div {
-    margin: 0 0 20px 0;
-  }
-  body main #contact form div input {
-    width: 100%;
-  }
-  body main #contact form button {
-    width: 100%;
-  }
   body footer {
     display: block;
   }
@@ -903,68 +1024,7 @@ body footer .attribution a {
     text-align: center;
   }
 }
-@media screen and (max-width: 760px) and (hover: hover) {
-  body header nav.mobile .block ul li a:hover {
-    color: white;
-  }
-  body header nav.mobile .block ul button:hover {
-    border-color: white;
-    color: white;
-  }
-  body header nav.mobile .sns img:hover {
-    cursor: pointer;
-  }
-}
 @media screen and (max-width: 480px) {
-  body header {
-    padding: 30px;
-  }
-  body main section {
-    padding: 30px;
-  }
-  body main section hgroup {
-    padding: 0 30px;
-  }
-  body main #hero .text {
-    padding: 0px;
-  }
-  body main #hero .text button,
-  body main #hero .text .chrome,
-  body main #hero .text .firefox {
-    width: 100%;
-  }
-  body main #hero .text .chrome {
-    margin-right: 0;
-  }
-  body main #feature article {
-    padding-bottom: 0;
-  }
-  body main #feature article .content {
-    padding: 30px 30px 10px 30px;
-  }
-  body main #pricing .container {
-    width: 90%;
-  }
-  body main #download {
-    margin-bottom: 60px;
-  }
-  body main #download hgroup {
-    padding: 0;
-  }
-  body main #download .extensions {
-    padding: 0 10px;
-    width: 100%;
-    max-width: 320px;
-  }
-  body main #FAQs hgroup {
-    padding: 0;
-  }
-  body main #FAQs .questions {
-    padding: 10px;
-  }
-  body main #contact form {
-    padding: 0;
-  }
   body footer {
     padding: 30px 30px 20px 30px;
   }

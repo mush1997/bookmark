@@ -1,0 +1,203 @@
+body main {
+    #pricing {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .container {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+
+            .option {
+                flex: 1 0 240px;
+                min-height: 480px;
+                padding: 20px 16px;
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: flex-start;
+                position: relative;
+
+                hgroup {
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+
+                    h3 {
+                        font-size: 1.3rem;
+                        letter-spacing: 2px;
+                    }
+
+                    p {
+                        margin: 20px auto;
+                        padding: 6px 0;
+                        width: 65%;
+                        min-width: 200px;
+                        border-radius: 10px;
+                        background-color: ghostwhite;
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                        color: $soft_red;
+                        letter-spacing: 1px;
+
+                        span {
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+
+                ul {
+                    padding: 10px 20px;
+
+                    li {
+                        padding: 10px;
+                        list-style: none;
+                        border-bottom: 1px solid gainsboro;
+                        font-size: 0.85rem;
+                        color: $very_dark_blue;
+                        text-align: left;
+                    }
+
+                    li:last-child {
+                        border-bottom: none;
+                    }
+                }
+
+                .learnMore {
+                    padding: 10px 16px;
+                    border: none;
+                    background-color: $soft_blue;
+                    color: white;
+                    letter-spacing: 1px;
+                    box-shadow: 0 1px 4px 0 grey;
+
+                    position: absolute;
+                    left: 50%;
+                    bottom: 20px;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .free {
+                border-radius: 10px 0 0 10px;
+                background-color: hsla(231, 69%, 60%, 0.1);
+            }
+
+            .standard {
+                background-color: hsla(231, 69%, 60%, 0.4);
+                box-shadow: 0px 1px 8px 2px hsl(229, 47%, 49%);
+
+                hgroup {
+                    h3 {
+                        font-size: 1.6rem;
+                    }
+
+                    p,
+                    p span {
+                        color: red;
+                    }
+                }
+
+            }
+
+            .premium {
+                border-radius: 0 10px 10px 0;
+                background-color: hsla(231, 69%, 60%, 0.7);
+            }
+        }
+    }
+}
+
+@media screen and (hover:hover) {
+    body main #pricing .container .option .learnMore:hover {
+        background-color: $very_dark_blue;
+    }
+}
+
+@media screen and (max-width:860px) {
+    body main #pricing {
+        .container {
+            width: 90%;
+
+            .option {
+                flex: 1 0 200px;
+
+                hgroup {
+                    p {
+                        width: 100%;
+                        min-width: auto;
+                    }
+                }
+
+                ul {
+                    padding: 10px 0;
+                }
+
+                .learnMore {
+                    width: 75%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:760px) {
+    body main #pricing {
+        display: block;
+
+        .container {
+            display: block;
+            margin: 0 auto;
+            width: 80%;
+
+            .option {
+                width: 100%;
+                min-height: auto;
+                display: block;
+                text-align: center;
+
+                hgroup {
+                    p {
+                        width: 100%;
+                        max-width: 300px;
+                    }
+                }
+
+                ul {
+                    margin: 0 auto;
+                    padding: 10px 20px;
+                    width: 100%;
+                    max-width: 330px;
+
+                    li {
+                        text-align: center;
+                    }
+                }
+
+                .learnMore {
+                    width: auto;
+                    position: static;
+                    transform: none;
+                }
+            }
+
+            .free {
+                border-radius: 10px 10px 0 0;
+            }
+
+            .premium {
+                border-radius: 0 0 10px 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    body main #pricing {
+        .container {
+            width: 90%;
+        }
+    }
+}

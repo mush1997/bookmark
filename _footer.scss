@@ -1,0 +1,115 @@
+body {
+    footer {
+        padding: 30px 60px 16px 60px;
+        background-color: $very_dark_blue;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .menu {
+            img {
+                margin-right: 16px;
+                filter: brightness(200%);
+                vertical-align: middle;
+            }
+
+            ul {
+                display: inline-block;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        margin: 0 16px;
+                        font-size: 0.7rem;
+                        font-weight: 100;
+                        color: white;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .sns {
+            img {
+                margin: 0 10px;
+                width: 20px;
+            }
+        }
+
+        .attribution {
+            margin-top: 20px;
+            width: 100%;
+            font-size: 10px;
+            color: $grayish_blue;
+            text-align: center;
+
+            a {
+                font-size: 10px;
+                color: $grayish_blue;
+            }
+        }
+    }
+}
+
+@media screen and (hover:hover) {
+    body footer {
+        .menu {
+            img:hover {
+                cursor: pointer;
+            }
+
+            ul li a:hover {
+                cursor: pointer;
+                color: $soft_red;
+            }
+        }
+
+        .sns img:hover {
+            cursor: pointer;
+            filter: invert(51%) sepia(31%) saturate(6029%) hue-rotate(328deg) brightness(102%) contrast(97%);
+        }
+    }
+}
+
+@media screen and (max-width:760px) {
+    body footer {
+        display: block;
+
+        .menu {
+            margin-bottom: 30px;
+            text-align: center;
+
+            img {
+                margin-right: 0;
+            }
+
+            ul {
+                display: block;
+
+                li {
+                    margin: 16px 0;
+                    display: block;
+
+                    a {
+                        margin: 0;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+        }
+
+        .sns {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    body footer {
+        padding: 30px 30px 20px 30px;
+    }
+}

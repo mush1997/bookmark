@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+$soft_blue: hsl(231, 69%, 60%);
+$soft_red: hsl(0, 94%, 66%);
+$grayish_blue: hsl(229, 8%, 60%);
+$very_dark_blue: hsl(229, 31%, 21%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik;
+    font-size: 18px;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+    color: $very_dark_blue;
+}

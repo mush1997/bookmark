@@ -1,0 +1,106 @@
+body main {
+    #hero {
+        padding-right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .heroPic {
+            flex-basis: 50%;
+            order: 1;
+            min-width: 380px;
+            position: relative;
+
+            img {
+                padding-right: 30px;
+                width: 100%;
+            }
+
+            div {
+                width: 72%;
+                aspect-ratio: 7/5;
+                border-radius: 130px 0 0 130px;
+                background-color: $soft_blue;
+                position: absolute;
+                bottom: -1%;
+                right: 0;
+                z-index: -1;
+            }
+        }
+
+        .text {
+            flex-basis: 50%;
+            padding: 40px;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chrome {
+                margin-right: 10px;
+            }
+
+            .firefox {
+                color: $very_dark_blue;
+                background-color: #eee;
+                box-shadow: 0 2px 2px 0px #ddd;
+            }
+        }
+    }
+}
+
+@media screen and (hover:hover) {
+    body main #hero .text .firefox:hover {
+        border-color: $very_dark_blue;
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width:860px) {
+    body main #hero {
+        .text {
+            padding: 30px 20px;
+        }
+    }
+}
+
+@media screen and (max-width:760px) {
+    body main #hero {
+        display: block;
+
+        .heroPic {
+            min-width: auto;
+            text-align: center;
+
+            img {
+                padding-right: 0;
+                width: 90%;
+            }
+        }
+
+        .text {
+            margin: 40px 30px 0 0;
+            padding: 30px;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    body main #hero {
+        .text {
+            padding: 0px;
+
+            button,
+            .chrome,
+            .firefox {
+                width: 100%;
+            }
+
+            .chrome {
+                margin-right: 0;
+            }
+        }
+    }
+}

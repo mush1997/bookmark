@@ -1,0 +1,183 @@
+body main {
+    #feature {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 30px 0;
+
+        .panel {
+            margin-bottom: 40px;
+            width: 65%;
+            text-align: center;
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 2px solid #ddd;
+
+                li {
+                    flex-basis: 30%;
+                    list-style: none;
+                    padding: 20px 0;
+                    font-size: 0.9rem;
+                    color: #555;
+                }
+
+                li.current {
+                    border-bottom: 4px solid $soft_red;
+                    color: black;
+                }
+            }
+        }
+
+        article {
+            padding: 30px 0;
+            width: 100%;
+            display: none;
+
+            .pic {
+                width: 48%;
+                display: inline-block;
+                text-align: right;
+                vertical-align: middle;
+                position: relative;
+
+                img {
+                    width: 75%;
+                    min-width: 300px;
+                }
+
+                div {
+                    width: 80%;
+                    aspect-ratio: 3/2;
+                    border-radius: 0 130px 130px 0;
+                    background-color: $soft_blue;
+                    position: absolute;
+                    bottom: -5%;
+                    left: 0;
+                    z-index: -1;
+                }
+            }
+
+            .content {
+                padding: 30px 70px;
+                width: 48%;
+                display: inline-block;
+                text-align: left;
+                vertical-align: middle;
+
+                h3 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        article.visible {
+            display: block;
+            animation: showing 1.2s forwards;
+        }
+
+        article:first-of-type {
+            .pic {
+                div {
+                    width: 95%;
+                    aspect-ratio: 5/2;
+                    bottom: -10%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (hover:hover) {
+    body main #feature .panel ul li:hover {
+        cursor: pointer;
+        color: $soft_red;
+    }
+}
+
+@media screen and (max-width:860px) {
+    body main #feature {
+        padding: 20px 0;
+
+        .panel {
+            width: 70%;
+        }
+
+        article {
+            padding: 10px 0;
+
+            .content {
+                padding: 30px 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:760px) {
+    body main #feature {
+        display: block;
+
+        .panel {
+            margin: -30px auto 0 auto;
+            padding: 40px;
+            width: 95%;
+
+            ul {
+                display: block;
+
+                li {
+                    border-top: 2px solid #ddd;
+                    text-align: center;
+                }
+            }
+        }
+
+        article {
+            .pic {
+                margin-bottom: 30px;
+                width: 100%;
+                text-align: center;
+
+                img {
+                    width: 65%;
+                    min-width: auto;
+                }
+
+                div {
+                    width: 60%;
+                    border-radius: 0 100px 100px 0;
+                    bottom: -2%;
+                }
+            }
+
+            .content {
+                padding: 40px;
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        article:first-of-type {
+            .pic {
+                div {
+                    width: 75%;
+                    aspect-ratio: 2/1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    body main #feature {
+        article {
+            padding-bottom: 0;
+
+            .content {
+                padding: 30px 30px 10px 30px;
+            }
+        }
+    }
+}

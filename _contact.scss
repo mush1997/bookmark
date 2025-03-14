@@ -1,0 +1,129 @@
+body main {
+    #contact {
+        margin-bottom: 0;
+        padding: 40px 30px;
+        background-color: $soft_blue;
+        text-align: center;
+
+        span {
+            font-size: 0.7rem;
+            color: white;
+            letter-spacing: 3px;
+            word-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin: 20px 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: white;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            div {
+                margin-right: 16px;
+                text-align: left;
+                position: relative;
+
+                img {
+                    visibility: hidden;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    right: 16px;
+                    top: 14px;
+                }
+
+                input {
+                    padding: 10px 12px;
+                    width: 340px;
+                    height: 48px;
+                    border-radius: 6px;
+                    border: none;
+                    outline: none;
+                    font-size: 0.8rem;
+                }
+
+                p {
+                    display: none;
+                    margin: 0;
+                    padding: 6px 10px;
+                    border-radius: 0 0 6px 6px;
+                    border: none;
+                    background-color: $soft_red;
+                    font-size: 0.7rem;
+                    font-weight: 100;
+                    color: white;
+                    font-style: italic;
+                }
+            }
+
+            div.warning {
+
+                img {
+                    visibility: visible;
+                }
+
+                input {
+                    border-radius: 6px 6px 0 0;
+                    border: 2px solid $soft_red;
+                }
+
+                p {
+                    display: block;
+                }
+            }
+
+            button {
+                margin-top: 0;
+                padding: 0 18px;
+                height: 48px;
+                border: 2px solid transparent;
+                background-color: $soft_red;
+                color: white;
+            }
+        }
+    }
+}
+
+@media screen and (hover:hover) {
+    body main #contact form button:hover {
+        border-color: $soft_red;
+        background-color: white;
+        color: $soft_red;
+    }
+}
+
+@media screen and (max-width:760px) {
+    body main #contact {
+        form {
+            padding: 0 40px;
+            display: block;
+
+            div {
+                margin: 0 0 20px 0;
+
+                input {
+                    width: 100%;
+                }
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    body main #contact {
+        form {
+            padding: 0;
+        }
+    }
+}

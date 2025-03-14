@@ -1,19 +1,19 @@
-/* dropdown navigation */
-const navLinks = document.querySelectorAll(".block a");
-const loginBtn = document.querySelector(".block button");
-const openBtn = document.getElementById("hamburgerIcon");
-const closeBtn = document.getElementById("closeIcon");
+/* dropdown menu */
+const navLinks = document.querySelectorAll("nav a");
+const loginBtn = document.querySelector("nav button");
+const openMenuBtn = document.getElementById("openMenuIcon");
+const closeMenuBtn = document.getElementById("closeMenuIcon");
 
-function openNav(event) {
-    event.target.parentElement.classList.add("mobile");
+function openMenu(event) {
+    event.target.parentElement.classList.add("showMenu");
     document.body.style.overflow = "hidden";
 }
 
-function closeNav(event) {
+function closeMenu(event) {
     if (event.target.nodeName === "IMG") {
-        event.target.parentElement.classList.remove("mobile");
+        event.target.parentElement.classList.remove("showMenu");
     } else {
-        event.target.closest("nav").classList.remove("mobile");
+        document.querySelector("nav").classList.remove("showMenu");
     }
 
     document.body.style.overflow = "auto";
@@ -21,15 +21,15 @@ function closeNav(event) {
 
 window.addEventListener("resize", () => {
     if (window.innerWidth > 760) {
-        openBtn.parentElement.classList.remove("mobile");
+        document.querySelector("nav").classList.remove("showMenu");
         document.body.style.overflow = "auto";
     }
 })
 
-navLinks.forEach(link => link.addEventListener("click", closeNav));
-loginBtn.addEventListener("click", closeNav);
-openBtn.addEventListener("click", openNav);
-closeBtn.addEventListener("click", closeNav);
+navLinks.forEach(link => link.addEventListener("click", closeMenu));
+loginBtn.addEventListener("click", closeMenu);
+openMenuBtn.addEventListener("click", openMenu);
+closeMenuBtn.addEventListener("click", closeMenu);
 
 /* switch features */
 const features = document.querySelectorAll(".panel li");
