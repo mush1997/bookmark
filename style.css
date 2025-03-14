@@ -279,7 +279,6 @@ body main section .downloadBtn {
 body main #hero {
   padding-right: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 body main #hero .heroPic {
