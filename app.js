@@ -41,8 +41,8 @@ function switchTab(event) {
     features.forEach(li => li.classList.remove("current"));
     event.target.classList.add("current");
 
-    allTabs.forEach(tab => tab.classList.remove("visible"));
-    document.querySelector(`[data-tab="${tabTitle}"]`).classList.add("visible");
+    allTabs.forEach(tab => tab.classList.remove("show"));
+    document.querySelector(`[data-tab="${tabTitle}"]`).classList.add("show");
 }
 
 features.forEach((li) => li.addEventListener("click", switchTab));

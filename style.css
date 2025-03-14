@@ -392,11 +392,13 @@ body main #feature article {
   width: 100%;
   display: none;
 }
-body main #feature article .pic {
+body main #feature article > div {
   width: 48%;
   display: inline-block;
-  text-align: right;
   vertical-align: middle;
+}
+body main #feature article .pic {
+  text-align: right;
   position: relative;
 }
 body main #feature article .pic img {
@@ -415,15 +417,11 @@ body main #feature article .pic div {
 }
 body main #feature article .content {
   padding: 30px 70px;
-  width: 48%;
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
 }
 body main #feature article .content h3 {
   font-size: 1.5rem;
 }
-body main #feature article.visible {
+body main #feature article.show {
   display: block;
   animation: showing 1.2s forwards;
 }
@@ -469,9 +467,11 @@ body main #feature article:first-of-type .pic div {
     border-top: 2px solid #ddd;
     text-align: center;
   }
+  body main #feature article > div {
+    width: 100%;
+  }
   body main #feature article .pic {
     margin-bottom: 30px;
-    width: 100%;
     text-align: center;
   }
   body main #feature article .pic img {
@@ -485,9 +485,8 @@ body main #feature article:first-of-type .pic div {
   }
   body main #feature article .content {
     padding: 40px;
-    width: 100%;
-    display: block;
     text-align: center;
+    display: block;
   }
   body main #feature article:first-of-type .pic div {
     width: 75%;
