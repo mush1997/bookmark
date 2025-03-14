@@ -32,20 +32,20 @@ openMenuBtn.addEventListener("click", openMenu);
 closeMenuBtn.addEventListener("click", closeMenu);
 
 /* switch features */
-const features = document.querySelectorAll(".panel li");
-const allTabs = document.querySelectorAll("#feature article");
+const tabs = document.querySelectorAll(".panel li");
+const features = document.querySelectorAll("#feature article");
 
 function switchTab(event) {
     let tabTitle = event.target.textContent;
 
-    features.forEach(li => li.classList.remove("current"));
+    tabs.forEach(li => li.classList.remove("current"));
     event.target.classList.add("current");
 
-    allTabs.forEach(tab => tab.classList.remove("show"));
+    features.forEach(feature => feature.classList.remove("show"));
     document.querySelector(`[data-tab="${tabTitle}"]`).classList.add("show");
 }
 
-features.forEach((li) => li.addEventListener("click", switchTab));
+tabs.forEach(li => li.addEventListener("click", switchTab));
 
 /* FAQ */
 const questionTitles = document.querySelectorAll(".title p");
