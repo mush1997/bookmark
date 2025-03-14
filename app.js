@@ -60,8 +60,8 @@ arrows.forEach((arrow) => arrow.addEventListener("click", toggleAnswer));
 
 /* email validation */
 const form = document.querySelector("form");
-const inputBox = form.querySelector("div");
-const input = form.querySelector("input");
+const inputBox = document.querySelector("form div");
+const input = document.querySelector("form input");
 const regex = /^([a-zA-Z0-9]{1,})+[a-zA-Z0-9._-]+@([a-zA-Z0-9]{1,})+([a-zA-Z0-9.-]{0,})+(\.[a-zA-Z]{2,})$/;
 let validation;
 
