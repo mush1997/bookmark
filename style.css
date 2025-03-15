@@ -681,6 +681,8 @@ body main #download .extensions .card {
 body main #download .extensions .card .browserIcon {
   margin-bottom: 20px;
   width: 36%;
+  min-width: 60px;
+  max-width: 130px;
 }
 body main #download .extensions .card .opera {
   width: 33%;
