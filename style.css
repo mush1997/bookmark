@@ -554,7 +554,7 @@ body main #pricing .container .option ul li {
   border-bottom: 1px solid gainsboro;
   font-size: 0.85rem;
   color: hsl(229, 31%, 21%);
-  text-align: left;
+  text-align: center;
 }
 body main #pricing .container .option ul li:last-child {
   border-bottom: none;
@@ -601,7 +601,7 @@ body main #pricing .container .premium {
     width: 90%;
   }
   body main #pricing .container .option {
-    flex: 1 0 200px;
+    flex: 1 0 220px;
   }
   body main #pricing .container .option hgroup p {
     width: 100%;
@@ -638,9 +638,6 @@ body main #pricing .container .premium {
     padding: 10px 20px;
     width: 100%;
     max-width: 330px;
-  }
-  body main #pricing .container .option ul li {
-    text-align: center;
   }
   body main #pricing .container .option .learnMore {
     width: auto;
