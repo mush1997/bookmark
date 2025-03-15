@@ -55,8 +55,8 @@ function toggleAnswer(event) {
     event.target.closest("article").classList.toggle("unfolded");
 }
 
-questionTitles.forEach((title) => title.addEventListener("click", toggleAnswer));
-arrows.forEach((arrow) => arrow.addEventListener("click", toggleAnswer));
+questionTitles.forEach(title => title.addEventListener("click", toggleAnswer));
+arrows.forEach(arrow => arrow.addEventListener("click", toggleAnswer));
 
 /* email validation */
 const form = document.querySelector("form");

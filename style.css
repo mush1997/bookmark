@@ -774,9 +774,6 @@ body main #FAQs {
 body main #FAQs .questions {
   width: 55%;
 }
-body main #FAQs .questions article .first {
-  border-top: 2px solid #ddd;
-}
 body main #FAQs .questions article .title {
   border-bottom: 2px solid #ddd;
   padding-right: 16px;
@@ -798,6 +795,9 @@ body main #FAQs .questions article .answer {
   font-weight: 300;
   color: gray;
   line-height: 1.6;
+}
+body main #FAQs .questions article:first-of-type .title {
+  border-top: 2px solid #ddd;
 }
 body main #FAQs .questions article.unfolded .title {
   border-bottom: none;
@@ -837,7 +837,7 @@ body main #FAQs div:last-child button {
     width: 100%;
   }
   body main #FAQs div:last-child {
-    margin-top: 10px;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 480px) {
@@ -846,6 +846,9 @@ body main #FAQs div:last-child button {
   }
   body main #FAQs .questions {
     padding: 10px;
+  }
+  body main #FAQs div:last-child {
+    margin-top: 30px;
   }
 }
 body main #contact {

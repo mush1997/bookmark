@@ -9,10 +9,6 @@ body main {
             width: 55%;
 
             article {
-                .first {
-                    border-top: 2px solid #ddd;
-                }
-
                 .title {
                     border-bottom: 2px solid #ddd;
                     padding-right: 16px;
@@ -37,6 +33,12 @@ body main {
                     font-weight: 300;
                     color: gray;
                     line-height: 1.6;
+                }
+            }
+
+            article:first-of-type {
+                .title {
+                    border-top: 2px solid #ddd;
                 }
             }
 
@@ -92,7 +94,7 @@ body main {
         }
 
         div:last-child {
-            margin-top: 10px;
+            margin-top: 0;
         }
     }
 }
@@ -105,6 +107,10 @@ body main {
 
         .questions {
             padding: 10px;
+        }
+
+        div:last-child {
+            margin-top: 30px;
         }
     }
 }
