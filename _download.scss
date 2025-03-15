@@ -6,30 +6,27 @@ body main {
         justify-content: center;
 
         .extensions {
+            width: 100%;
             display: flex;
             justify-content: center;
 
             .card {
                 flex-basis: 20%;
                 min-width: 200px;
-                margin: 0 16px;
+                margin: 0 24px;
                 padding: 16px 0;
                 border-radius: 10px;
                 background-color: white;
                 box-shadow: 0 4px 16px 2px #ccc;
                 text-align: center;
 
-                .icon {
+                .browserIcon {
                     margin-bottom: 20px;
                     width: 36%;
                 }
 
                 .opera {
                     width: 33%;
-                }
-
-                .dots {
-                    width: 100%;
                 }
 
                 h3 {
@@ -43,8 +40,14 @@ body main {
                     font-weight: 200;
                 }
 
+                .dots {
+                    width: 100%;
+                }
+
                 button {
-                    margin: 20px 16px 0 16px;
+                    width: 70%;
+                    min-width: 160px;
+                    max-width: 240px;
                 }
             }
 
@@ -61,6 +64,12 @@ body main {
     }
 }
 
+@media screen and (max-width:860px) {
+    body main #download .extensions .card {
+        margin: 0 16px;
+    }
+}
+
 @media screen and (max-width:760px) {
     body main #download {
         margin-bottom: 90px;
@@ -70,6 +79,7 @@ body main {
             margin: 40px auto 0 auto;
             padding: 0 40px;
             width: 85%;
+            max-width: 450px;
             display: block;
 
             .card {
@@ -77,7 +87,7 @@ body main {
                 margin: 24px 0;
                 padding: 30px 0;
 
-                .icon {
+                .browserIcon {
                     margin-bottom: 20px;
                     width: 20%;
                 }
@@ -86,9 +96,8 @@ body main {
                     width: 20%;
                 }
 
-                button {
-                    margin: 20px 0 0 0;
-                    width: 80%;
+                button {                    
+                    max-width: 200px;
                 }
             }
 

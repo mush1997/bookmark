@@ -212,7 +212,6 @@ body main section .moreInfo {
 body main section .chrome,
 body main section .firefox,
 body main section .downloadBtn {
-  width: 160px;
   border: 2px solid transparent;
   background-color: hsl(231, 69%, 60%);
   color: white;
@@ -221,6 +220,7 @@ body main section .chrome,
 body main section .firefox {
   margin-top: 10px;
   padding: 12px 0;
+  width: 160px;
   height: 44px;
   font-size: 0.85rem;
   font-weight: 300;
@@ -230,8 +230,9 @@ body main section .firefox {
   display: inline-block;
 }
 body main section .downloadBtn {
-  padding: 2px 0;
-  height: 48px;
+  margin-top: 20px;
+  padding: 4px 10px;
+  height: 52px;
 }
 
 @media screen and (hover: hover) {
@@ -663,28 +664,26 @@ body main #download {
   justify-content: center;
 }
 body main #download .extensions {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 body main #download .extensions .card {
   flex-basis: 20%;
   min-width: 200px;
-  margin: 0 16px;
+  margin: 0 24px;
   padding: 16px 0;
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 4px 16px 2px #ccc;
   text-align: center;
 }
-body main #download .extensions .card .icon {
+body main #download .extensions .card .browserIcon {
   margin-bottom: 20px;
   width: 36%;
 }
 body main #download .extensions .card .opera {
   width: 33%;
-}
-body main #download .extensions .card .dots {
-  width: 100%;
 }
 body main #download .extensions .card h3 {
   margin: 0 16px;
@@ -695,8 +694,13 @@ body main #download .extensions .card p {
   font-size: 0.9rem;
   font-weight: 200;
 }
+body main #download .extensions .card .dots {
+  width: 100%;
+}
 body main #download .extensions .card button {
-  margin: 20px 16px 0 16px;
+  width: 70%;
+  min-width: 160px;
+  max-width: 240px;
 }
 body main #download .extensions .card:nth-of-type(2) {
   position: relative;
@@ -707,6 +711,11 @@ body main #download .extensions .card:nth-of-type(3) {
   top: 60px;
 }
 
+@media screen and (max-width: 860px) {
+  body main #download .extensions .card {
+    margin: 0 16px;
+  }
+}
 @media screen and (max-width: 760px) {
   body main #download {
     margin-bottom: 90px;
@@ -716,6 +725,7 @@ body main #download .extensions .card:nth-of-type(3) {
     margin: 40px auto 0 auto;
     padding: 0 40px;
     width: 85%;
+    max-width: 450px;
     display: block;
   }
   body main #download .extensions .card {
@@ -723,7 +733,7 @@ body main #download .extensions .card:nth-of-type(3) {
     margin: 24px 0;
     padding: 30px 0;
   }
-  body main #download .extensions .card .icon {
+  body main #download .extensions .card .browserIcon {
     margin-bottom: 20px;
     width: 20%;
   }
@@ -731,8 +741,7 @@ body main #download .extensions .card:nth-of-type(3) {
     width: 20%;
   }
   body main #download .extensions .card button {
-    margin: 20px 0 0 0;
-    width: 80%;
+    max-width: 200px;
   }
   body main #download .extensions .card:nth-of-type(2),
   body main #download .extensions .card:nth-of-type(3) {
