@@ -120,7 +120,7 @@ body main {
             width: 90%;
 
             .option {
-                flex: 1 0 220px;
+                flex: 1 0 210px;
 
                 hgroup {
                     p {
@@ -151,7 +151,9 @@ body main {
             width: 80%;
 
             .option {
+                margin: 0 auto;
                 width: 100%;
+                max-width: 400px;
                 min-height: auto;
                 display: block;
                 text-align: center;
