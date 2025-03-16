@@ -231,8 +231,8 @@ body main section .firefox {
 }
 body main section .downloadBtn {
   margin-top: 20px;
-  padding: 4px 10px;
-  height: 52px;
+  padding: 6px 10px;
+  min-height: 40px;
 }
 
 @media screen and (hover: hover) {
