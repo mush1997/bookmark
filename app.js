@@ -1,6 +1,6 @@
 (function () {
     window.addEventListener("scroll", () => {
-        window.location.hash ? window.location.hash = "" : "";
+        window.location.hash ? window.history.replaceState(null, "", " ") : "";
     });
 
     window.addEventListener("resize", () => {
