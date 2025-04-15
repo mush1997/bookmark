@@ -77,11 +77,7 @@ body header nav > div ul button {
     color: hsl(0, 94%, 66%);
     box-shadow: none;
   }
-  body header nav.showMenu > div ul li a:hover {
-    color: white;
-  }
   body header nav.showMenu > div ul button:hover {
-    border-color: white;
     color: white;
   }
   body header nav.showMenu .sns img:hover {

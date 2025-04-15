@@ -83,15 +83,8 @@ body {
         }
 
         nav.showMenu {
-            &>div ul {
-                li a:hover {
-                    color: white;
-                }
-
-                button:hover {
-                    border-color: white;
-                    color: white;
-                }
+            &>div ul button:hover {
+                color: white;
             }
 
             .sns img:hover {
