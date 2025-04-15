@@ -1,3 +1,5 @@
+if (history.scrollRestoration) { history.scrollRestoration = "manual"; }
+
 /* dropdown menu */
 const nav = document.querySelector("header nav");
 const navLinks = document.querySelectorAll("header nav a");
@@ -10,12 +12,16 @@ loginBtn.addEventListener("click", closeMenu);
 openMenuBtn.addEventListener("click", openMenu);
 closeMenuBtn.addEventListener("click", closeMenu);
 
+window.addEventListener("scroll", () => {
+    window.location.hash ? window.history.replaceState(null, "", "index.html") : "";
+});
+
 window.addEventListener("resize", () => {
     if (window.innerWidth > 760 && nav.classList.contains("showMenu")) {
         nav.classList.remove("showMenu");
         document.body.style.overflow = "auto";
     }
-})
+});
 
 function openMenu() {
     nav.classList.add("showMenu");
